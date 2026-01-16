@@ -382,6 +382,272 @@
 
 ---
 
+## When You Get Stuck
+
+### Coding Problems — Troubleshooting
+
+**Stuck Decision Tree**
+
+```
+Can't understand the problem?
+  └─> Re-read constraints. Draw input/output examples.
+      Still stuck? → Read LeetCode Discuss for clarification (not solutions)
+
+Don't know which approach to use?
+  └─> Ask: "What pattern does this remind me of?"
+      └─> Use Pattern Recognition Table below
+      └─> Try brute force first — optimize after
+
+Code doesn't work?
+  └─> Trace through with smallest example by hand
+  └─> Add print statements at each step
+  └─> Check off-by-one errors (loop bounds, indices)
+
+Time Limit Exceeded?
+  └─> Current complexity is too high
+  └─> Look for unnecessary repeated work
+  └─> Consider: HashMap, sorting, two pointers, binary search
+
+Can't optimize further?
+  └─> After 25 min, read hints (not solution)
+  └─> After 35 min, read solution, then re-implement without looking
+```
+
+**Pattern Recognition Table**
+
+| If you see... | Think about... | Learn more |
+|---------------|----------------|------------|
+| "Find pair/subarray with sum X" | Two pointers, HashMap | [Two Pointers Guide](https://leetcode.com/discuss/study-guide/1688903/Solved-all-two-pointers-problems-in-100-days) |
+| "Contiguous subarray" | Sliding window | [Sliding Window](https://leetcode.com/discuss/study-guide/657507/Sliding-Window-for-Beginners-Problems-or-Template-or-Sample-Solutions) |
+| "Find min/max in sorted or range" | Binary search | [Binary Search Guide](https://leetcode.com/discuss/study-guide/786126/Python-Powerful-Ultimate-Binary-Search-Template) |
+| "Tree traversal" | BFS (level), DFS (path) | [Tree Patterns](https://leetcode.com/discuss/study-guide/1337373/Tree-question-pattern-oror2021-placement) |
+| "Graph connectivity" | BFS/DFS, Union-Find | [Graph Guide](https://leetcode.com/discuss/study-guide/655708/Graph-For-Beginners-Problems-or-Pattern-or-Sample-Solutions) |
+| "Dependencies/ordering" | Topological sort | [Topological Sort](https://leetcode.com/discuss/study-guide/1786329/topological-sort-for-beginners) |
+| "All combinations/permutations" | Backtracking | [Backtracking Template](https://leetcode.com/discuss/study-guide/1405817/Backtracking-algorithm-%2B-problems-to-practice) |
+| "Optimal substructure" | Dynamic programming | [DP Patterns](https://leetcode.com/discuss/study-guide/458695/Dynamic-Programming-Patterns) |
+| "K largest/smallest" | Heap | [Heap Guide](https://leetcode.com/discuss/study-guide/1360400/Priority-Queue-oror-Problems-oror-Template-oror-All-in-One) |
+| "String matching" | Trie, KMP | [String Algorithms](https://leetcode.com/discuss/study-guide/1723337/String-Algorithm-oror-Pattern-oror-Template) |
+
+**Deep Dive Resources by Topic**
+
+| Topic | When to Study | Resources |
+|-------|---------------|-----------|
+| Arrays & Hashing | Week 1-2 | [NeetCode Arrays](https://neetcode.io/roadmap) |
+| Two Pointers | Week 2 | [Patterns Guide](https://leetcode.com/discuss/study-guide/1688903/Solved-all-two-pointers-problems-in-100-days) |
+| Sliding Window | Week 2 | [Template + Problems](https://leetcode.com/discuss/study-guide/657507/Sliding-Window-for-Beginners-Problems-or-Template-or-Sample-Solutions) |
+| Binary Search | Week 2-3 | [Ultimate Template](https://leetcode.com/discuss/study-guide/786126/Python-Powerful-Ultimate-Binary-Search-Template) |
+| Trees | Week 3-4 | [Tree Patterns](https://leetcode.com/explore/learn/card/data-structure-tree/) |
+| Graphs | Week 5-6 | [Graph for Beginners](https://leetcode.com/explore/learn/card/graph/) |
+| Dynamic Programming | If needed | [DP Study Guide](https://leetcode.com/discuss/study-guide/1433252/Dynamic-Programming-Patterns) |
+| Backtracking | If needed | [Backtracking Template](https://leetcode.com/discuss/study-guide/1405817/Backtracking-algorithm-%2B-problems-to-practice) |
+
+**Recovery Actions**
+
+| Problem | Action |
+|---------|--------|
+| Failed same pattern 2+ times | Stop. Study the pattern guide for 30 min before next attempt |
+| Solved but took > 45 min | Re-solve tomorrow without looking. Target: < 25 min |
+| Couldn't solve at all | Study solution → wait 2 days → re-solve from scratch |
+| Keep making same mistake | Create a "mistake log" — write pattern and fix |
+
+---
+
+### System Design — Troubleshooting
+
+**Stuck Decision Tree**
+
+```
+Don't know where to start?
+  └─> Always start with requirements (functional + non-functional)
+  └─> Ask: "What are the core use cases?"
+
+Can't estimate scale?
+  └─> Use defaults: 1M DAU, 10:1 read/write ratio
+  └─> Work backwards from storage/bandwidth
+
+Don't know which database?
+  └─> Use Database Selection Guide below
+
+Can't think of components?
+  └─> Use Building Blocks Reference below
+
+Design feels incomplete?
+  └─> Walk through a request end-to-end
+  └─> Ask: "What happens when X fails?"
+```
+
+**Database Selection Guide**
+
+| Need | Choose | Examples |
+|------|--------|----------|
+| ACID transactions, complex queries | SQL (PostgreSQL, MySQL) | User accounts, orders, payments |
+| High write throughput, flexible schema | NoSQL Document (MongoDB) | Product catalogs, content management |
+| Simple key-value, caching | Redis, Memcached | Sessions, rate limiting, caching |
+| Time-series data | InfluxDB, TimescaleDB | Metrics, IoT sensor data |
+| Graph relationships | Neo4j | Social networks, recommendations |
+| Full-text search | Elasticsearch | Search engines, log analysis |
+| Wide-column, massive scale | Cassandra, HBase | Analytics, event logging |
+
+**Building Blocks Reference**
+
+| Component | When to Use | Key Considerations |
+|-----------|-------------|-------------------|
+| **Load Balancer** | Multiple servers | Round robin vs least connections, health checks |
+| **CDN** | Static content, global users | Cache invalidation, edge locations |
+| **Cache** | Repeated reads | TTL, invalidation strategy, cache-aside vs write-through |
+| **Message Queue** | Async processing | At-least-once vs exactly-once, ordering |
+| **API Gateway** | Multiple services | Rate limiting, auth, routing |
+| **Database Replication** | High availability | Leader-follower, sync vs async |
+| **Sharding** | Data too large for one node | Shard key selection, rebalancing |
+| **Consistent Hashing** | Distributed cache/storage | Virtual nodes, replication |
+
+**Common Design Mistakes & Fixes**
+
+| Mistake | Fix |
+|---------|-----|
+| Jumping to solution | Spend 5 min on requirements first |
+| Single point of failure | Add redundancy to every critical component |
+| No caching | Cache heavy reads at application and/or CDN layer |
+| Synchronous everything | Use message queues for non-critical paths |
+| Ignoring failure modes | Discuss retry, circuit breaker, fallback for each component |
+| Over-engineering | Start simple, scale only when you explain WHY |
+
+**Deep Dive Resources by Topic**
+
+| Topic | Resources |
+|-------|-----------|
+| Caching | [Caching Strategies](https://codeahoy.com/2017/08/11/caching-strategies-and-how-to-choose-the-right-one/) |
+| Message Queues | [Kafka vs RabbitMQ](https://www.confluent.io/learn/kafka-vs-rabbitmq/) |
+| Database Sharding | [Sharding Guide](https://www.digitalocean.com/community/tutorials/understanding-database-sharding) |
+| CAP Theorem | [CAP Explained](https://www.ibm.com/topics/cap-theorem) |
+| Microservices | [Microservices Patterns](https://microservices.io/patterns/index.html) |
+| Load Balancing | [Load Balancing Algorithms](https://samwho.dev/load-balancing/) |
+
+---
+
+### Behavioral — Troubleshooting
+
+**Stuck Decision Tree**
+
+```
+Can't think of a story?
+  └─> Use Story Mining Prompts below
+  └─> ANY project counts — even small ones
+
+Story feels weak/boring?
+  └─> Add specific metrics
+  └─> Focus on YOUR decisions, not team's
+  └─> Emphasize the "why" behind actions
+
+Story is too long?
+  └─> Cut situation to 2 sentences max
+  └─> Remove unnecessary technical details
+  └─> Focus: What did YOU do? What was the result?
+
+Don't have a "failure" story?
+  └─> Reframe: What would you do differently?
+  └─> Small mistakes count (missed deadline, wrong tech choice)
+
+Can't quantify results?
+  └─> Use relative terms: "reduced by 50%", "cut in half"
+  └─> Soft metrics work: "team adopted my approach", "became the standard"
+```
+
+**Story Mining Prompts**
+
+Use these prompts to find stories from your experience:
+
+| Category | Questions to Ask Yourself |
+|----------|---------------------------|
+| **Technical Leadership** | When did you make a technical decision others disagreed with? When did you introduce a new tool/library? When did you debug something nobody else could fix? |
+| **Conflict** | When did you disagree with your manager? When did two teams want different things? When did you have to say no to someone? |
+| **Failure** | When did something you built break in production? When did you miss a deadline? When did you make a wrong technical choice? |
+| **Mentorship** | When did you help someone grow? When did you onboard a new team member? When did you do a code review that taught something? |
+| **Ambiguity** | When did you start a project with unclear requirements? When did priorities change mid-project? When did you have to make decisions with incomplete info? |
+| **Impact** | When did you improve performance significantly? When did you save the company money/time? When did you ship something users loved? |
+
+**Story Strengthening Techniques**
+
+| Weak Story Element | How to Strengthen |
+|--------------------|-------------------|
+| "The team did X" | Change to "I suggested X, and the team adopted it" |
+| "It improved performance" | Change to "Response time dropped from 2s to 200ms" |
+| "I helped with the project" | Change to "I designed the API and implemented the caching layer" |
+| "We had a problem" | Change to "Our system was dropping 10% of requests during peak hours" |
+| "It was successful" | Change to "We shipped on time and reduced support tickets by 40%" |
+
+**Stories You Must Have Ready**
+
+- [ ] Tell me about yourself (60-90 seconds)
+- [ ] Biggest technical challenge
+- [ ] Time you failed / made a mistake
+- [ ] Conflict with teammate or manager
+- [ ] Led a project or initiative
+- [ ] Mentored someone
+- [ ] Handled ambiguous requirements
+- [ ] Why are you leaving current job?
+- [ ] Why do you want this role?
+
+---
+
+## Weekly Review Process
+
+Every **Friday (15 min)** — assess the week and adjust:
+
+### Review Checklist
+
+- [ ] Did I complete all 3 sessions this week?
+- [ ] Which session was hardest? Why?
+- [ ] What pattern/concept am I still weak on?
+- [ ] Do I need to add extra practice for any topic?
+
+### Adjustment Actions
+
+| Situation | Action |
+|-----------|--------|
+| Missed a session | Make it up on weekend, don't skip |
+| Struggled with coding pattern | Add 2 extra problems of that pattern next week |
+| System design felt incomplete | Re-read guide, list what you missed |
+| Behavioral story was weak | Rewrite with stronger metrics |
+| Feeling confident | Add one harder problem or design |
+| Feeling overwhelmed | Reduce scope — focus on core problems only |
+
+### Progress Tracker
+
+| Week | Coding Confidence (1-5) | System Design Confidence (1-5) | Behavioral Confidence (1-5) | Notes |
+|------|-------------------------|--------------------------------|-----------------------------|-------|
+| 1 | | | | |
+| 2 | | | | |
+| 3 | | | | |
+| 4 | | | | |
+| 5 | | | | |
+| 6 | | | | |
+| 7 | | | | |
+| 8 | | | | |
+
+---
+
+## Emergency Prep (If Interview is Sooner)
+
+If you have less than 8 weeks, focus on **highest impact items**:
+
+### 1 Week Available
+- [ ] Solve: Two Sum, Valid Anagram, LCA
+- [ ] Design: URL Shortener only
+- [ ] Behavioral: 3 STAR stories + "Tell me about yourself"
+
+### 2 Weeks Available
+- [ ] Solve: Two Sum, Longest Substring, Level Order Traversal, Number of Islands
+- [ ] Design: URL Shortener, Rate Limiter
+- [ ] Behavioral: 5 STAR stories covering all themes
+
+### 4 Weeks Available
+- [ ] Complete Weeks 1, 2, 5, 7 from this plan
+- [ ] Skip Weeks 3, 4, 6
+- [ ] Focus on mock interviews in final week
+
+---
+
 ## Rules
 
 - [ ] Stop exactly at the end of each time block
