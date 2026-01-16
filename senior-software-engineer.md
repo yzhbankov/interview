@@ -12,7 +12,7 @@
 ### Monday — Coding
 **Goal:** Warm-up, establish baseline
 
-- [ ] Solve **Two Sum**
+- [*] Solve **Two Sum**
 - [ ] Solve without IDE (paper or notes first)
 - [ ] Implement clean solution
 - [ ] Write time complexity
