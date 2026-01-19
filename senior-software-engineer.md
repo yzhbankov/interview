@@ -168,7 +168,7 @@
 - [x] Write time complexity
 - [x] Write space complexity
 - [x] Describe one alternative approach
-- [ ] (Optional) Solve [Valid Anagram](https://leetcode.com/problems/valid-anagram/)
+- [x] (Optional) Solve [Valid Anagram](https://leetcode.com/problems/valid-anagram/)
 
 ---
 
