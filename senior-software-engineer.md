@@ -162,12 +162,12 @@
 ### Monday — Coding
 **Goal:** Warm-up, establish baseline
 
-- [ ] Solve [Two Sum](https://leetcode.com/problems/two-sum/)
-- [ ] Solve without IDE (paper or notes first)
-- [ ] Implement clean solution
-- [ ] Write time complexity
-- [ ] Write space complexity
-- [ ] Describe one alternative approach
+- [x] Solve [Two Sum](https://leetcode.com/problems/two-sum/)
+- [x] Solve without IDE (paper or notes first)
+- [x] Implement clean solution
+- [x] Write time complexity
+- [x] Write space complexity
+- [x] Describe one alternative approach
 - [ ] (Optional) Solve [Valid Anagram](https://leetcode.com/problems/valid-anagram/)
 
 ---
