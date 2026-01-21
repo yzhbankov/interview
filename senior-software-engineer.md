@@ -175,10 +175,10 @@
 ### Wednesday — System Design
 **Goal:** Learn design structure
 
-- [ ] Write design framework (requirements, APIs, data model, scaling)
-- [ ] Design **URL Shortener** — [Guide](https://www.educative.io/courses/grokking-modern-system-design-interview-for-engineers-managers/system-design-tinyurl)
-- [ ] Draw components
-- [ ] Draw data flow
+- [x] Write design framework (requirements, APIs, data model, scaling)
+- [x] Design **URL Shortener** — [Guide](https://www.educative.io/courses/grokking-modern-system-design-interview-for-engineers-managers/system-design-tinyurl)
+- [x] Draw components
+- [x] Draw data flow
 - [ ] List 5 key trade-offs
 
 ---
