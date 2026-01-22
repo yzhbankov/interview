@@ -186,9 +186,9 @@
 ### Thursday — Behavioral
 **Goal:** Start STAR stories
 
-- [ ] Write STAR: Production incident
-- [ ] Write STAR: Conflict with teammate
-- [ ] Limit each story to 8–10 sentences
+- [x] Write STAR: Production incident
+- [x] Write STAR: Conflict with teammate
+- [x] Limit each story to 8–10 sentences
 - [ ] Identify 1 weak answer
 
 ---
