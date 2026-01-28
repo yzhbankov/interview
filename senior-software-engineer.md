@@ -208,9 +208,9 @@
 ### Wednesday — System Design
 **Goal:** Rate limiting
 
-- [ ] Design **Rate Limiter** — [Guide](https://www.educative.io/courses/grokking-modern-system-design-interview-for-engineers-managers/design-of-a-rate-limiter)
-- [ ] Compare token bucket vs leaky bucket — [Article](https://www.figma.com/blog/an-alternative-approach-to-rate-limiting/)
-- [ ] Decide where rate limiting lives (gateway vs service)
+- [x] Design **Rate Limiter** — [Guide](https://www.educative.io/courses/grokking-modern-system-design-interview-for-engineers-managers/design-of-a-rate-limiter)
+- [x] Compare token bucket vs leaky bucket — [Article](https://www.figma.com/blog/an-alternative-approach-to-rate-limiting/)
+- [x] Decide where rate limiting lives (gateway vs service)
 
 ---
 
