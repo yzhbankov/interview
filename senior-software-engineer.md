@@ -228,9 +228,9 @@
 ### Monday — Coding
 **Goal:** Trees
 
-- [ ] Solve [Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/)
-- [ ] Implement BFS — [BFS Guide](https://leetcode.com/explore/learn/card/data-structure-tree/134/traverse-a-tree/931/)
-- [ ] Explain why DFS is less suitable
+- [x] Solve [Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/)
+- [x] Implement BFS — [BFS Guide](https://leetcode.com/explore/learn/card/data-structure-tree/134/traverse-a-tree/931/)
+- [x] Explain why DFS is less suitable
 
 ---
 
