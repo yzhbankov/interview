@@ -237,10 +237,10 @@
 ### Wednesday — System Design
 **Goal:** Data-heavy system
 
-- [ ] Design **Notification System** — [Guide](https://www.educative.io/courses/grokking-modern-system-design-interview-for-engineers-managers/system-design-web-crawler)
-- [ ] Describe fan-out strategy
-- [ ] Define retry handling
-- [ ] Handle deduplication
+- [x] Design **Notification System** — [Guide](https://www.educative.io/courses/grokking-modern-system-design-interview-for-engineers-managers/system-design-web-crawler)
+- [x] Describe fan-out strategy
+- [x] Define retry handling
+- [x] Handle deduplication
 
 ---
 
