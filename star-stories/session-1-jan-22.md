@@ -30,3 +30,15 @@
 **Action:** I first listened to his concerns to understand his perspective. I demonstrated tools that made following the coding standards easier and proposed a team discussion to agree on common rules that everyone could follow. For testing, I presented data showing how small issues discovered later by QA could significantly increase workload, emphasizing that investing time upfront was more efficient. Together, we aligned on standards and testing expectations.
 
 **Result:** The feature was delivered with high-quality standards. Our team adopted standardized coding conventions across multiple projects, and test coverage increased, reducing QA workload and post-release bugs. The teammate felt included and the team morale remained positive.
+
+---
+
+## 3. Technology Stack Decision
+
+**Situation:** When we started a new health monitoring project, the team needed to choose the technology stack. One teammate proposed a new, less widely adopted technology with a small community. I disagreed because I was concerned it could limit support, updates, and long-term maintainability.
+
+**Task:** My task was to influence the team to choose a technology with a larger, active community and proven track record, ensuring better product support and higher quality.
+
+**Action:** I collected data on several candidate technologies and performed a comparative analysis. I presented the results to the team, highlighting the benefits of the technology I recommended versus the proposed option. After discussion, the team acknowledged my concerns but ultimately decided on a hybrid approach. I initially disagreed but fully committed to executing the chosen solution.
+
+**Result:** The hybrid approach was successful. We delivered a product that is still in use today, and the parts built on the more widely supported technology ensured maintainability and reliability, even though some of the newer technologies are not widely adopted yet.
