@@ -217,9 +217,9 @@
 ### Thursday — Behavioral
 **Goal:** Ownership & failure
 
-- [ ] Write STAR: Big mistake
-- [ ] Describe how it was fixed
-- [ ] Answer: What would you do differently?
+- [x] Write STAR: Big mistake
+- [x] Describe how it was fixed
+- [x] Answer: What would you do differently?
 
 ---
 
@@ -247,9 +247,9 @@
 ### Thursday — Behavioral
 **Goal:** Disagreement & influence
 
-- [ ] Answer: Disagree and commit
-- [ ] Explain how you influenced the decision
-- [ ] Describe the outcome
+- [x] Answer: Disagree and commit
+- [x] Explain how you influenced the decision
+- [x] Describe the outcome
 
 ---
 
