@@ -258,9 +258,9 @@
 ### Monday — Coding
 **Goal:** Recursion
 
-- [ ] Solve [Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/)
-- [ ] Draw recursion tree
-- [ ] Identify base cases
+- [x] Solve [Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/)
+- [x] Draw recursion tree
+- [x] Identify base cases
 
 ---
 
