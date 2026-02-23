@@ -287,9 +287,9 @@
 ### Monday — Coding
 **Goal:** Graphs
 
-- [ ] Solve [Number of Islands](https://leetcode.com/problems/number-of-islands/)
-- [ ] Explain graph modeling — [Graph Guide](https://leetcode.com/explore/learn/card/graph/)
-- [ ] Compare BFS vs DFS
+- [x] Solve [Number of Islands](https://leetcode.com/problems/number-of-islands/)
+- [x] Explain graph modeling — [Graph Guide](https://leetcode.com/explore/learn/card/graph/)
+- [x] Compare BFS vs DFS
 
 ---
 
