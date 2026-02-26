@@ -267,9 +267,9 @@
 ### Wednesday — System Design
 **Goal:** Storage systems
 
-- [ ] Design **File Storage Service** — [Dropbox Design](https://www.educative.io/courses/grokking-modern-system-design-interview-for-engineers-managers/system-design-google-docs)
-- [ ] Separate metadata and blobs
-- [ ] Handle versioning
+- [x] Design **File Storage Service** — [Dropbox Design](https://www.educative.io/courses/grokking-modern-system-design-interview-for-engineers-managers/system-design-google-docs)
+- [x] Separate metadata and blobs
+- [x] Handle versioning
 - [ ] Define access control
 
 ---
