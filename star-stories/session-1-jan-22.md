@@ -42,3 +42,15 @@
 **Action:** I collected data on several candidate technologies and performed a comparative analysis. I presented the results to the team, highlighting the benefits of the technology I recommended versus the proposed option. After discussion, the team acknowledged my concerns but ultimately decided on a hybrid approach. I initially disagreed but fully committed to executing the chosen solution.
 
 **Result:** The hybrid approach was successful. We delivered a product that is still in use today, and the parts built on the more widely supported technology ensured maintainability and reliability, even though some of the newer technologies are not widely adopted yet.
+
+---
+
+## 4. Hiring and Onboarding
+
+**Situation:** Our team was facing increased business demand for new features, leading to a critical capacity bottleneck. To address this, I requested a new engineer for our team and successfully hired a mid-level software engineer.
+
+**Task:** My primary objective was to accelerate his 'time-to-value.' I wanted to ensure he could navigate our specific development lifecycle and architectural standards within weeks, rather than months, to immediately alleviate the team's workload.
+
+**Action:** I developed a structured onboarding framework consisting of cheatsheets, coding style guides, and Git workflow documentation. I established scheduled calls to review these materials and provide a safe space for his questions. Furthermore, I used active code reviews as a teaching tool, focusing on our best practices.
+
+**Result:** The approach was effective, the engineer was fully integrated and contributing to the production codebase within his first couple of weeks. By the end of his second month, he played a key role in the successful delivery of a major feature, directly increasing team's velocity and meeting the business's increased demand.
