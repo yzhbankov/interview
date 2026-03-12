@@ -277,8 +277,8 @@
 ### Thursday — Behavioral
 **Goal:** Mentorship
 
-- [ ] Write STAR: Mentoring a junior engineer
-- [ ] Describe impact on the team
+- [x] Write STAR: Mentoring a junior engineer
+- [x] Describe impact on the team
 
 ---
 
