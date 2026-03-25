@@ -296,8 +296,8 @@
 ### Wednesday — System Design
 **Goal:** Event-driven systems
 
-- [ ] Design **Metrics / Logging Pipeline** — [Guide](https://www.educative.io/courses/grokking-modern-system-design-interview-for-engineers-managers/distributed-logging)
-- [ ] Define message queue (Kafka-like) — [Kafka Basics](https://kafka.apache.org/documentation/)
+- [x] Design **Add click service** — [Guide](https://www.educative.io/courses/grokking-modern-system-design-interview-for-engineers-managers/distributed-logging)
+- [x] Define message queue
 - [ ] Describe consumers
 - [ ] Handle backpressure
 
