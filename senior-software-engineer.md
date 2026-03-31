@@ -1,25 +1,42 @@
-# Interview Preparation Plan (8 Weeks)
+# Interview Preparation Plan (12 Weeks) — Big Tech Senior SWE
 
-**Schedule**
+**Target:** Senior Software Engineer at FAANG / Big Tech (L5+ equivalent)
+
+**Schedule (4 sessions/week)**
 - **Monday 10:30–11:30** — Coding / Algorithms
 - **Wednesday 8:00–9:00** — System Design
 - **Thursday 10:00–11:00** — Behavioral / Review
+- **Saturday 9:00–10:30** — Extra Coding (DP, weak areas, re-solves) + OOD/Concurrency
+
+**Problem target:** ~80 LeetCode problems across all major patterns by Week 12
 
 ## Resources
 
 ### Coding
 - [LeetCode](https://leetcode.com/) — Practice problems
-- [NeetCode](https://neetcode.io/) — Curated problem lists and video explanations
+- [NeetCode 150](https://neetcode.io/practice) — Curated 150 problems covering all patterns
+- [NeetCode Roadmap](https://neetcode.io/roadmap) — Visual topic map and video explanations
 - [Big-O Cheat Sheet](https://www.bigocheatsheet.com/) — Time/space complexity reference
+- [Algorithm Patterns Cheat Sheet](algorithm-patterns.md) — Code templates for 12 core patterns
 
 ### System Design
 - [System Design Primer](https://github.com/donnemartin/system-design-primer) — Comprehensive guide
 - [ByteByteGo](https://bytebytego.com/) — System design fundamentals
 - [Designing Data-Intensive Applications](https://dataintensive.net/) — Book by Martin Kleppmann
+- [System Design Templates](system-design/templates.md) — Reusable frameworks and component reference
 
 ### Behavioral
 - [STAR Method Guide](https://www.themuse.com/advice/star-interview-method) — How to structure answers
 - [Amazon Leadership Principles](https://www.amazon.jobs/content/en/our-workplace/leadership-principles) — Common behavioral themes
+- [Tech Interview Handbook — Behavioral](https://www.techinterviewhandbook.org/behavioral-interview/) — Question bank and prep guide
+
+### Object-Oriented Design
+- [OOD Interview Questions](https://github.com/tssovi/grokking-the-object-oriented-design-interview) — Common OOD problems
+- SOLID Principles — Single Responsibility, Open-Closed, Liskov Substitution, Interface Segregation, Dependency Inversion
+
+### Concurrency & Multithreading
+- [Java Concurrency in Practice](https://jcip.net/) — Foundational concepts (applicable to any language)
+- Race conditions, deadlocks, producer-consumer, thread pools, locks vs lock-free structures
 
 ---
 
@@ -131,16 +148,17 @@
 3. Check: Is the "I" clear vs "we"?
 4. Identify one weak point to improve next week
 
-**Stories Every Senior Engineer Needs**
+**Stories Every Senior Engineer Needs (10 minimum for Big Tech)**
 
-| Theme | Question Types |
-|-------|----------------|
-| **Technical Leadership** | Led architecture decision, introduced new technology, solved complex bug |
-| **Conflict Resolution** | Disagreed with teammate/manager, handled difficult stakeholder |
-| **Failure & Learning** | Made mistake, missed deadline, project failed |
-| **Mentorship** | Helped junior grow, conducted code reviews, knowledge sharing |
-| **Ambiguity** | Unclear requirements, changing priorities, incomplete information |
-| **Impact** | Improved performance, saved costs, delivered key feature |
+| Theme | Question Types | # Stories Needed |
+|-------|----------------|-----------------|
+| **Technical Leadership** | Led architecture decision, introduced new technology, solved complex bug | 2 |
+| **Conflict Resolution** | Disagreed with teammate/manager, handled difficult stakeholder | 1-2 |
+| **Failure & Learning** | Made mistake, missed deadline, project failed | 1-2 |
+| **Mentorship & Team Growth** | Helped junior grow, conducted code reviews, knowledge sharing, dealt with underperformer | 1-2 |
+| **Ambiguity & Decision-Making** | Unclear requirements, changing priorities, made decisions with incomplete data | 1-2 |
+| **Cross-Team Influence** | Drove adoption across teams, aligned competing priorities, pushed back on product decisions | 1-2 |
+| **Impact & Scale** | Improved performance, saved costs, delivered key feature, worked on large-scale system | 1-2 |
 
 **Common Mistakes to Avoid**
 - Being too vague ("I helped improve the system")
@@ -196,6 +214,14 @@
 - [x] Limit each story to 8–10 sentences
 - [ ] Identify 1 weak answer
 
+### Saturday — Extra Coding
+**Goal:** Linked Lists fundamentals
+
+- [ ] Solve [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) — Iterative and recursive
+- [ ] Solve [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/)
+- [ ] Solve [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/) — Fast/slow pointers
+- [ ] **Pattern note:** Write when to use fast/slow pointer technique
+
 ---
 
 ## Week 2
@@ -231,6 +257,13 @@
 - [x] Write STAR: Big mistake
 - [x] Describe how it was fixed
 - [x] Answer: What would you do differently?
+
+### Saturday — Extra Coding
+**Goal:** More Linked Lists + re-solves
+
+- [ ] Solve [Reorder List](https://leetcode.com/problems/reorder-list/) — Combines find-middle + reverse + merge
+- [ ] Solve [Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) — Two pointers
+- [ ] Re-solve Week 1 problems you found hardest without notes (target: < 20 min each)
 
 ---
 
@@ -269,6 +302,14 @@
 - [x] Explain how you influenced the decision
 - [x] Describe the outcome
 
+### Saturday — Extra Coding
+**Goal:** Binary search deep dive + Trie introduction
+
+- [ ] Solve [Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas/) — Binary search on answer
+- [ ] Solve [Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)
+- [ ] Solve [Implement Trie](https://leetcode.com/problems/implement-trie-prefix-tree/) — Prefix tree data structure
+- [ ] **Pattern note:** Write "binary search on answer" template
+
 ---
 
 ## Week 4
@@ -300,10 +341,21 @@
 ---
 
 ### Thursday — Behavioral
-**Goal:** Mentorship
+**Goal:** Mentorship & team dynamics
 
 - [x] Write STAR: Mentoring a junior engineer
 - [x] Describe impact on the team
+- [ ] Write STAR: Dealing with an underperformer or difficult team dynamic
+- [ ] Write STAR: Pushed back on a product/business decision — explain data you used
+
+### Saturday — Extra Coding
+**Goal:** DP introduction (start early — hardest topic)
+
+- [ ] Solve [House Robber](https://leetcode.com/problems/house-robber/) — Linear DP
+- [ ] Solve [Unique Paths](https://leetcode.com/problems/unique-paths/) — Grid DP
+- [ ] Solve [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) — Kadane's algorithm
+- [ ] Study [DP Patterns Guide](https://leetcode.com/discuss/study-guide/458695/Dynamic-Programming-Patterns) — Read first 3 patterns
+- [ ] **Pattern note:** For each problem, write: state definition, recurrence, base case
 
 ---
 
@@ -335,10 +387,20 @@
 ---
 
 ### Thursday — Behavioral
-**Goal:** Leadership signals
+**Goal:** Leadership signals & cross-team influence
 
 - [ ] Answer: Handling vague requirements
 - [ ] Emphasize structure and decision-making
+- [ ] Write STAR: Drove a cross-team initiative or influenced without authority
+- [ ] Write STAR: Made a technical decision with incomplete information — trade-offs
+
+### Saturday — Extra Coding
+**Goal:** More DP + Graph shortest path
+
+- [ ] Solve [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/) — 2D DP
+- [ ] Solve [Word Break](https://leetcode.com/problems/word-break/) — DP with string
+- [ ] Solve [Network Delay Time](https://leetcode.com/problems/network-delay-time/) — Dijkstra's algorithm
+- [ ] **Pattern note:** Write Dijkstra template with priority queue
 
 ---
 
@@ -372,10 +434,20 @@
 ---
 
 ### Thursday — Behavioral
-**Goal:** Handling pressure
+**Goal:** Handling pressure & impact at scale
 
 - [ ] Answer: Most stressful situation
 - [ ] Explain prioritization and reasoning
+- [ ] Write STAR: Improved system reliability/performance at scale — with metrics
+
+### Saturday — Extra Coding
+**Goal:** DP deep dive — knapsack patterns
+
+- [ ] Solve [Coin Change](https://leetcode.com/problems/coin-change/) — Unbounded knapsack (re-solve if already done Monday)
+- [ ] Solve [Partition Equal Subset Sum](https://leetcode.com/problems/partition-equal-subset-sum/) — 0/1 knapsack
+- [ ] Solve [Target Sum](https://leetcode.com/problems/target-sum/) — DP with offset or HashMap
+- [ ] Solve [Edit Distance](https://leetcode.com/problems/edit-distance/) — Classic 2D DP (Hard)
+- [ ] **Pattern note:** Compare unbounded vs 0/1 knapsack — when to iterate coins inner vs outer
 
 ---
 
@@ -409,6 +481,15 @@
 ### Thursday — Behavioral
 - [ ] Answer 5 random behavioral questions — [Question List](https://www.techinterviewhandbook.org/behavioral-interview-questions/)
 - [ ] Speak only (no writing)
+- [ ] Practice "Why are you leaving?" and "Why this company?" — keep each under 60 seconds
+
+### Saturday — Extra Coding
+**Goal:** Design-a-data-structure problems (very common at Big Tech)
+
+- [ ] Solve [Min Stack](https://leetcode.com/problems/min-stack/) — Stack with O(1) getMin
+- [ ] Solve [Design HashMap](https://leetcode.com/problems/design-hashmap/) — Hash function + collision handling
+- [ ] Solve [Design Twitter](https://leetcode.com/problems/design-twitter/) — Combines OOD + heap + HashMap
+- [ ] **Pattern note:** For data structure design, always clarify: which operations, what complexity target
 
 ---
 
@@ -439,6 +520,177 @@
 ### Thursday — Behavioral
 - [ ] Finalize "Tell me about yourself" — [Guide](https://www.techinterviewhandbook.org/self-introduction/)
 - [ ] Finalize top 5 STAR stories
+- [ ] Practice answering "Where do you see yourself in 3-5 years?"
+
+### Saturday — Extra Coding
+**Goal:** OOD introduction (Amazon/Microsoft round)
+
+- [ ] Design **Parking Lot** — Classes, inheritance, interfaces. Think SOLID principles
+- [ ] Design **Elevator System** — State machine, scheduling algorithm, concurrency
+- [ ] Study SOLID principles — Write one-sentence summary of each
+- [ ] **Pattern note:** OOD approach: 1) Clarify use cases, 2) Identify core objects, 3) Define relationships, 4) Walk through scenarios
+
+---
+
+## Week 9 — Concurrency & Advanced DP
+
+### Monday — Coding
+**Goal:** Concurrency & multithreading (commonly asked at senior level)
+
+- [ ] Study: Race conditions, deadlocks, producer-consumer pattern, thread safety
+- [ ] Solve [Print in Order](https://leetcode.com/problems/print-in-order/) — Basic synchronization
+- [ ] Solve [Print FooBar Alternately](https://leetcode.com/problems/print-foobar-alternately/) — Thread coordination
+- [ ] Solve [The Dining Philosophers](https://leetcode.com/problems/the-dining-philosophers/) — Deadlock avoidance
+- [ ] **Study note:** Write common concurrency bugs and how to prevent them (mutex, semaphore, condition variable)
+
+---
+
+### Wednesday — System Design
+**Goal:** Storage internals — Distributed Key-Value Store
+
+- [ ] Design **Distributed Key-Value Store** (like DynamoDB/Redis cluster)
+- [ ] Discuss: consistent hashing, replication factor, quorum reads/writes (W + R > N)
+- [ ] Address: node failure and recovery, anti-entropy with Merkle trees
+- [ ] Discuss: gossip protocol for membership, vector clocks for conflict resolution
+- [ ] Compare: strong consistency (Raft/Paxos) vs eventual consistency (Dynamo-style)
+
+---
+
+### Thursday — Behavioral
+**Goal:** Senior-level leadership polish
+
+- [ ] Refine all stories: ensure each has specific metrics and clear "I" ownership
+- [ ] Practice: "Tell me about a system you built end-to-end" (covers architecture + execution)
+- [ ] Practice: "How do you make technical decisions with incomplete data?"
+
+### Saturday — Extra Coding
+**Goal:** Advanced DP — intervals & trees
+
+- [ ] Solve [Burst Balloons](https://leetcode.com/problems/burst-balloons/) — Interval DP (Hard)
+- [ ] Solve [Longest Valid Parentheses](https://leetcode.com/problems/longest-valid-parentheses/) — Stack or DP
+- [ ] Solve [Decode Ways](https://leetcode.com/problems/decode-ways/) — Linear DP with conditions
+- [ ] Re-solve 2 DP problems from weeks 4-6 without notes
+
+---
+
+## Week 10 — News Feed & Full Mocks
+
+### Monday — Coding
+**Goal:** Mixed pattern timed practice (simulate real interviews)
+
+- [ ] Timed (25 min): [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/)
+- [ ] Timed (25 min): [Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/) (Hard)
+- [ ] Timed (30 min): [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/) (Hard)
+- [ ] Review: Which patterns did you recognize? Which did you miss?
+
+---
+
+### Wednesday — System Design
+**Goal:** Social media system — News Feed
+
+- [ ] Design **News Feed / Timeline** (Facebook/Twitter)
+- [ ] Discuss: fan-out-on-write vs fan-out-on-read vs hybrid approach for celebrities
+- [ ] Design: ranking algorithm (chronological vs relevance-based)
+- [ ] Address: caching strategy for timeline, pre-computed feed vs on-demand
+- [ ] Handle: multimedia content delivery, CDN integration
+- [ ] **Practice:** Present this design in exactly 35 minutes (leave 10 min for Q&A)
+
+---
+
+### Thursday — Behavioral
+**Goal:** Full mock behavioral round
+
+- [ ] Do full 45-min mock: answer 6-8 questions back-to-back (timer running)
+- [ ] Record yourself or practice with a partner
+- [ ] Self-review: Were answers under 3 min each? Did each have metrics?
+
+### Saturday — Extra Coding
+**Goal:** OOD round practice
+
+- [ ] Design **Library Management System** — CRUD, search, reservations, late fees
+- [ ] Design **Online Chess Game** — Game state, move validation, multiplayer
+- [ ] For each: write class diagram, identify design patterns used (Strategy, Observer, Factory)
+
+---
+
+## Week 11 — Advanced System Design & Gaps
+
+### Monday — Coding
+**Goal:** Fill gaps — problems you've struggled with most
+
+- [ ] Re-solve your 5 hardest problems from Weeks 1-10 without any notes
+- [ ] Target: solve each in < 25 min
+- [ ] For any you can't solve: study solution → write the pattern → schedule re-solve in Week 12
+- [ ] Solve [Word Ladder](https://leetcode.com/problems/word-ladder/) — BFS on implicit graph (Hard)
+
+---
+
+### Wednesday — System Design
+**Goal:** Design-your-own-system (most realistic senior-level question)
+
+- [ ] Pick a system you've actually built professionally
+- [ ] Redesign it from scratch using interview framework (45 min, timed)
+- [ ] Identify: what would you do differently now? What trade-offs did you make?
+- [ ] Prepare to discuss: why certain technologies were chosen, what you'd change at 100x scale
+- [ ] Also prep: **API Gateway / Service Mesh** design — routing, auth, rate limiting, circuit breaking
+
+---
+
+### Thursday — Behavioral
+**Goal:** Company-specific prep
+
+- [ ] Research target company's values/principles (Amazon LPs, Google's Googleyness, Meta's core values)
+- [ ] Map your 10+ stories to company-specific themes
+- [ ] Prepare 2-3 thoughtful questions for each interview round ("reverse interview")
+- [ ] Practice: "Why [company name]?" — specific, genuine, researched answer
+
+### Saturday — Extra Coding
+**Goal:** Concurrency + advanced data structures
+
+- [ ] Solve [LFU Cache](https://leetcode.com/problems/lfu-cache/) — HashMap + doubly linked lists (Hard)
+- [ ] Solve [Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/) — Two heaps
+- [ ] Solve [Merge K Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) — Heap + linked list
+- [ ] Study: Compare LRU vs LFU vs ARC cache eviction — when to use each
+
+---
+
+## Week 12 — Final Polish & Mock Interviews
+
+### Monday — Coding
+**Goal:** Full interview simulation
+
+- [ ] Complete mock: 2 problems in 45 minutes (pick randomly from unsolved NeetCode 150)
+- [ ] Speak your approach out loud the entire time
+- [ ] Record and review: Did you talk through trade-offs? Edge cases? Complexity?
+- [ ] Final review: Go through all pattern notes from [algorithm-patterns.md](algorithm-patterns.md)
+
+---
+
+### Wednesday — System Design
+**Goal:** Full mock interview simulation
+
+- [ ] Have someone (or ChatGPT/Claude) give you a random system design problem
+- [ ] Complete full design in 40 minutes (leave 5 min for questions)
+- [ ] Review: Did you cover all 7 phases? Did you discuss trade-offs? Failure modes?
+- [ ] Quick review all designs from [system-design/templates.md](system-design/templates.md)
+
+---
+
+### Thursday — Behavioral
+**Goal:** Final polish
+
+- [ ] Record "Tell me about yourself" — must be exactly 60-90 seconds
+- [ ] Run through all 10+ STAR stories — each under 3 minutes
+- [ ] Prepare closing questions for each interview round
+- [ ] Mental prep: Visualize interview day, plan logistics, get sleep
+
+### Saturday — Extra Coding
+**Goal:** Confidence builder — victory lap
+
+- [ ] Re-solve 5 favorite problems (ones you know well) to build confidence
+- [ ] Review your mistake log — any recurring patterns?
+- [ ] Skim through all pattern notes one final time
+- [ ] **You're ready.** Trust your preparation.
 
 ---
 
@@ -493,13 +745,18 @@ Can't optimize further?
 | Topic | When to Study | Resources |
 |-------|---------------|-----------|
 | Arrays & Hashing | Week 1-2 | [NeetCode Arrays](https://neetcode.io/roadmap) |
+| Linked Lists | Week 1-2 (Sat) | [Linked List Guide](https://leetcode.com/explore/learn/card/linked-list/) |
 | Two Pointers | Week 2 | [Patterns Guide](https://leetcode.com/discuss/study-guide/1688903/Solved-all-two-pointers-problems-in-100-days) |
 | Sliding Window | Week 2 | [Template + Problems](https://leetcode.com/discuss/study-guide/657507/Sliding-Window-for-Beginners-Problems-or-Template-or-Sample-Solutions) |
-| Binary Search | Week 2-3 | [Ultimate Template](https://leetcode.com/discuss/study-guide/786126/Python-Powerful-Ultimate-Binary-Search-Template) |
+| Binary Search | Week 3 | [Ultimate Template](https://leetcode.com/discuss/study-guide/786126/Python-Powerful-Ultimate-Binary-Search-Template) |
 | Trees | Week 3-4 | [Tree Patterns](https://leetcode.com/explore/learn/card/data-structure-tree/) |
-| Graphs | Week 5-6 | [Graph for Beginners](https://leetcode.com/explore/learn/card/graph/) |
-| Dynamic Programming | If needed | [DP Study Guide](https://leetcode.com/discuss/study-guide/1433252/Dynamic-Programming-Patterns) |
-| Backtracking | If needed | [Backtracking Template](https://leetcode.com/discuss/study-guide/1405817/Backtracking-algorithm-%2B-problems-to-practice) |
+| Backtracking | Week 4 | [Backtracking Template](https://leetcode.com/discuss/study-guide/1405817/Backtracking-algorithm-%2B-problems-to-practice) |
+| Graphs & Union-Find | Week 5-6 | [Graph for Beginners](https://leetcode.com/explore/learn/card/graph/) |
+| Dynamic Programming | Week 4-6 (Sat), Week 6, 9 | [DP Study Guide](https://leetcode.com/discuss/study-guide/1433252/Dynamic-Programming-Patterns) |
+| Heap & Priority Queue | Week 7 | [Heap Guide](https://leetcode.com/discuss/study-guide/1360400/Priority-Queue-oror-Problems-oror-Template-oror-All-in-One) |
+| Monotonic Stack | Week 7 | [Stack Problems](https://leetcode.com/discuss/study-guide/2347639/A-comprehensive-guide-and-template-for-monotonic-stack-based-problems) |
+| Concurrency | Week 9 | [Concurrency Problems](https://leetcode.com/problemset/concurrency/) |
+| OOD / Data Structure Design | Week 7-8 (Sat) | [OOD Questions](https://github.com/tssovi/grokking-the-object-oriented-design-interview) |
 
 **Recovery Actions**
 
@@ -636,17 +893,23 @@ Use these prompts to find stories from your experience:
 | "We had a problem" | Change to "Our system was dropping 10% of requests during peak hours" |
 | "It was successful" | Change to "We shipped on time and reduced support tickets by 40%" |
 
-**Stories You Must Have Ready**
+**Stories You Must Have Ready (Big Tech expects 10+)**
 
 - [ ] Tell me about yourself (60-90 seconds)
-- [ ] Biggest technical challenge
-- [ ] Time you failed / made a mistake
-- [ ] Conflict with teammate or manager
-- [ ] Led a project or initiative
-- [ ] Mentored someone
-- [ ] Handled ambiguous requirements
+- [ ] Biggest technical challenge you've solved
+- [ ] Time you failed / made a mistake — and what you learned
+- [ ] Conflict with teammate or manager — how you resolved it
+- [ ] Led a project or initiative end-to-end
+- [ ] Mentored someone — specific growth you enabled
+- [ ] Handled ambiguous requirements — how you created structure
+- [ ] Pushed back on a product/business decision with data
+- [ ] Drove a cross-team initiative or influenced without authority
+- [ ] Dealt with an underperformer or difficult team dynamic
+- [ ] Made a technical decision with incomplete information — trade-offs you weighed
+- [ ] Improved system reliability / performance at scale — with metrics
 - [ ] Why are you leaving current job?
 - [ ] Why do you want this role?
+- [ ] Where do you see yourself in 3-5 years?
 
 ---
 
@@ -656,10 +919,11 @@ Every **Friday (15 min)** — assess the week and adjust:
 
 ### Review Checklist
 
-- [ ] Did I complete all 3 sessions this week?
+- [ ] Did I complete all 4 sessions this week?
 - [ ] Which session was hardest? Why?
 - [ ] What pattern/concept am I still weak on?
 - [ ] Do I need to add extra practice for any topic?
+- [ ] How many total problems have I solved? (target: ~7/week)
 
 ### Adjustment Actions
 
@@ -674,40 +938,50 @@ Every **Friday (15 min)** — assess the week and adjust:
 
 ### Progress Tracker
 
-| Week | Coding Confidence (1-5) | System Design Confidence (1-5) | Behavioral Confidence (1-5) | Notes |
-|------|-------------------------|--------------------------------|-----------------------------|-------|
-| 1 | | | | |
-| 2 | | | | |
-| 3 | | | | |
-| 4 | | | | |
-| 5 | | | | |
-| 6 | | | | |
-| 7 | | | | |
-| 8 | | | | |
+| Week | Problems Solved | Coding (1-5) | System Design (1-5) | Behavioral (1-5) | Notes |
+|------|----------------|--------------|---------------------|-------------------|-------|
+| 1 | | | | | |
+| 2 | | | | | |
+| 3 | | | | | |
+| 4 | | | | | |
+| 5 | | | | | |
+| 6 | | | | | |
+| 7 | | | | | |
+| 8 | | | | | |
+| 9 | | | | | |
+| 10 | | | | | |
+| 11 | | | | | |
+| 12 | | | | | |
 
 ---
 
 ## Emergency Prep (If Interview is Sooner)
 
-If you have less than 8 weeks, focus on **highest impact items**:
+If you have less than 12 weeks, focus on **highest impact items**:
 
 ### 1 Week Available
-- [ ] Solve: Two Sum, Valid Anagram, LCA, Merge Intervals, LRU Cache
-- [ ] Design: URL Shortener only (nail the framework)
-- [ ] Behavioral: 3 STAR stories + "Tell me about yourself"
-- [ ] Review all pattern notes in [algorithm-patterns.md](algorithm-patterns.md)
+- [ ] Solve: Two Sum, Reverse Linked List, LCA, Merge Intervals, LRU Cache, Coin Change, Number of Islands
+- [ ] Design: URL Shortener only (nail the framework — hit all 7 phases)
+- [ ] Behavioral: 5 STAR stories + "Tell me about yourself"
+- [ ] Review [algorithm-patterns.md](algorithm-patterns.md) and [system-design/templates.md](system-design/templates.md)
 
 ### 2 Weeks Available
-- [ ] Solve: Two Sum, 3Sum, Longest Substring, Level Order Traversal, Number of Islands, Coin Change, LRU Cache
-- [ ] Design: URL Shortener, Rate Limiter
-- [ ] Behavioral: 5 STAR stories covering all themes
+- [ ] Solve: Two Sum, 3Sum, Longest Substring, Level Order Traversal, Validate BST, Number of Islands, Coin Change, LRU Cache, Merge Intervals, Top K Frequent, Course Schedule
+- [ ] Design: URL Shortener, Rate Limiter, News Feed (one per day)
+- [ ] Behavioral: 8 STAR stories covering all themes + "Tell me about yourself"
 - [ ] Study pattern recognition table + system design building blocks
 
 ### 4 Weeks Available
-- [ ] Complete Weeks 1, 2, 5, 7 from this plan
-- [ ] Add Week 6 Monday (DP) — most commonly tested
-- [ ] Focus on mock interviews in final week
+- [ ] Complete Weeks 1, 2, 5, 6 from this plan (all sessions including Saturday)
+- [ ] Add mock interviews in final 3 days
 - [ ] Review [algorithm-patterns.md](algorithm-patterns.md) and [system-design/templates.md](system-design/templates.md)
+- [ ] Write all 10+ STAR stories — practice out loud
+
+### 8 Weeks Available
+- [ ] Complete Weeks 1-8 from this plan (all sessions including Saturday)
+- [ ] Skip Weeks 9-10, go directly to Week 11-12 (polish and mocks)
+- [ ] Ensure 60+ problems solved across all patterns
+- [ ] Do at least 2 full mock interviews (coding + design + behavioral)
 
 ---
 
