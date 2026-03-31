@@ -303,6 +303,65 @@ class Trie:
 
 ---
 
+## 13. Linked List Manipulation
+
+**When to use:** Reverse, merge, detect cycles, find middle, reorder.
+
+**Reverse a linked list (iterative):**
+```
+prev = None
+curr = head
+while curr:
+    next_node = curr.next
+    curr.next = prev
+    prev = curr
+    curr = next_node
+return prev  # new head
+```
+
+**Detect cycle (Floyd's):**
+```
+slow = fast = head
+while fast and fast.next:
+    slow = slow.next
+    fast = fast.next.next
+    if slow == fast:
+        return True  # cycle found
+return False
+```
+
+**Find middle (slow/fast):**
+```
+slow = fast = head
+while fast and fast.next:
+    slow = slow.next
+    fast = fast.next.next
+return slow  # middle node
+```
+
+**Key problems:** Reverse Linked List, Merge Two Sorted Lists, Linked List Cycle, Remove Nth Node From End, Reorder List
+
+---
+
+## 14. Intervals
+
+**When to use:** Overlapping intervals, scheduling, merge/insert intervals.
+
+```
+# Merge overlapping intervals
+intervals.sort(key=lambda x: x[0])
+merged = [intervals[0]]
+for start, end in intervals[1:]:
+    if start <= merged[-1][1]:
+        merged[-1][1] = max(merged[-1][1], end)
+    else:
+        merged.append([start, end])
+```
+
+**Key problems:** Merge Intervals, Insert Interval, Non-overlapping Intervals, Meeting Rooms II
+
+---
+
 ## Complexity Quick Reference
 
 | Data Structure | Access | Search | Insert | Delete |
