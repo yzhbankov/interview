@@ -160,7 +160,7 @@
 ## Week 1
 
 ### Monday — Coding
-**Goal:** Warm-up, establish baseline
+**Goal:** Warm-up, establish baseline — Arrays & Hashing
 
 - [x] Solve [Two Sum](https://leetcode.com/problems/two-sum/)
 - [x] Solve without IDE (paper or notes first)
@@ -169,6 +169,9 @@
 - [x] Write space complexity
 - [x] Describe one alternative approach
 - [x] (Optional) Solve [Valid Anagram](https://leetcode.com/problems/valid-anagram/)
+- [ ] Solve [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) — HashMap pattern reinforcement
+- [ ] Solve [Group Anagrams](https://leetcode.com/problems/group-anagrams/) — HashMap with custom keys
+- [ ] **Pattern note:** Write when to use HashMap vs sorting for lookup problems
 
 ---
 
@@ -180,6 +183,8 @@
 - [x] Draw components
 - [x] Draw data flow
 - [ ] List 5 key trade-offs
+- [ ] Discuss hash collision strategies (base62 encoding vs pre-generated keys)
+- [ ] Explain read-heavy optimization (caching layer, CDN for redirects)
 
 ---
 
@@ -196,21 +201,27 @@
 ## Week 2
 
 ### Monday — Coding
-**Goal:** Arrays & strings
+**Goal:** Two Pointers & Sliding Window
 
 - [x] Solve [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
 - [x] Explain sliding window out loud — [Pattern Guide](https://leetcode.com/discuss/study-guide/657507/Sliding-Window-for-Beginners-Problems-or-Template-or-Sample-Solutions)
 - [x] List edge cases
 - [ ] Re-solve in under 20 minutes
+- [ ] Solve [3Sum](https://leetcode.com/problems/3sum/) — Two pointers on sorted array
+- [ ] Solve [Container With Most Water](https://leetcode.com/problems/container-with-most-water/) — Greedy two pointers
+- [ ] Solve [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/) — Advanced sliding window (Hard)
+- [ ] **Pattern note:** Write the sliding window template (expand right, shrink left, track answer)
 
 ---
 
 ### Wednesday — System Design
-**Goal:** Rate limiting
+**Goal:** Rate limiting & distributed coordination
 
 - [x] Design **Rate Limiter** — [Guide](https://www.educative.io/courses/grokking-modern-system-design-interview-for-engineers-managers/design-of-a-rate-limiter)
 - [x] Compare token bucket vs leaky bucket — [Article](https://www.figma.com/blog/an-alternative-approach-to-rate-limiting/)
 - [x] Decide where rate limiting lives (gateway vs service)
+- [ ] Discuss distributed rate limiting with Redis (race conditions, Lua scripts)
+- [ ] Explain sliding window log vs fixed window counter trade-offs
 
 ---
 
@@ -226,21 +237,28 @@
 ## Week 3
 
 ### Monday — Coding
-**Goal:** Trees
+**Goal:** Trees & Binary Search
 
 - [x] Solve [Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/)
 - [x] Implement BFS — [BFS Guide](https://leetcode.com/explore/learn/card/data-structure-tree/134/traverse-a-tree/931/)
 - [x] Explain why DFS is less suitable
+- [ ] Solve [Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/) — Inorder traversal / range validation
+- [ ] Solve [Binary Search](https://leetcode.com/problems/binary-search/) — Master the template
+- [ ] Solve [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) — Modified binary search
+- [ ] **Pattern note:** Write the binary search template (left, right, mid, when to move which pointer)
 
 ---
 
 ### Wednesday — System Design
-**Goal:** Data-heavy system
+**Goal:** Async processing & notification systems
 
 - [x] Design **Notification System** — [Guide](https://www.educative.io/courses/grokking-modern-system-design-interview-for-engineers-managers/system-design-web-crawler)
 - [x] Describe fan-out strategy
 - [x] Define retry handling
 - [x] Handle deduplication
+- [ ] Compare fan-out-on-write vs fan-out-on-read (and hybrid approach)
+- [ ] Design priority queues for urgent vs non-urgent notifications
+- [ ] Discuss exactly-once delivery guarantees and idempotency keys
 
 ---
 
@@ -256,21 +274,28 @@
 ## Week 4
 
 ### Monday — Coding
-**Goal:** Recursion
+**Goal:** Recursion & Backtracking
 
 - [x] Solve [Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/)
 - [x] Draw recursion tree
 - [x] Identify base cases
+- [ ] Solve [Subsets](https://leetcode.com/problems/subsets/) — Backtracking fundamentals
+- [ ] Solve [Combination Sum](https://leetcode.com/problems/combination-sum/) — Backtracking with pruning
+- [ ] Solve [Word Search](https://leetcode.com/problems/word-search/) — Backtracking on grid
+- [ ] **Pattern note:** Write the backtracking template (choose → explore → un-choose)
 
 ---
 
 ### Wednesday — System Design
-**Goal:** Storage systems
+**Goal:** Storage systems & consistency
 
 - [x] Design **File Storage Service** — [Dropbox Design](https://www.educative.io/courses/grokking-modern-system-design-interview-for-engineers-managers/system-design-google-docs)
 - [x] Separate metadata and blobs
 - [x] Handle versioning
 - [ ] Define access control
+- [ ] Discuss chunking strategy for large files (dedup, delta sync)
+- [ ] Explain conflict resolution for concurrent edits (OT vs CRDT)
+- [ ] **Concept deep dive:** Study CAP theorem trade-offs — [CAP Explained](https://www.ibm.com/topics/cap-theorem)
 
 ---
 
@@ -285,21 +310,27 @@
 ## Week 5
 
 ### Monday — Coding
-**Goal:** Graphs
+**Goal:** Graphs & Union-Find
 
 - [x] Solve [Number of Islands](https://leetcode.com/problems/number-of-islands/)
 - [x] Explain graph modeling — [Graph Guide](https://leetcode.com/explore/learn/card/graph/)
 - [x] Compare BFS vs DFS
+- [ ] Solve [Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/) — Multi-source BFS
+- [ ] Solve [Redundant Connection](https://leetcode.com/problems/redundant-connection/) — Union-Find pattern
+- [ ] **Pattern note:** Write Union-Find template (find with path compression, union by rank)
 
 ---
 
 ### Wednesday — System Design
-**Goal:** Event-driven systems
+**Goal:** Event-driven & streaming systems
 
-- [x] Design **Add click service** — [Guide](https://www.educative.io/courses/grokking-modern-system-design-interview-for-engineers-managers/distributed-logging)
+- [x] Design **Ad Click Aggregation Service** — [Guide](https://www.educative.io/courses/grokking-modern-system-design-interview-for-engineers-managers/distributed-logging)
 - [x] Define message queue
 - [ ] Describe consumers
 - [ ] Handle backpressure
+- [ ] Compare Kafka vs RabbitMQ for this use case — [Comparison](https://www.confluent.io/learn/kafka-vs-rabbitmq/)
+- [ ] Design windowed aggregation (tumbling vs sliding windows)
+- [ ] **Concept deep dive:** Study event sourcing and CQRS patterns
 
 ---
 
@@ -314,21 +345,29 @@
 ## Week 6
 
 ### Monday — Coding
-**Goal:** Graph dependencies
+**Goal:** Dynamic Programming & Topological Sort
 
-- [ ] Solve [Course Schedule](https://leetcode.com/problems/course-schedule/)
+- [ ] Solve [Course Schedule](https://leetcode.com/problems/course-schedule/) — Topological sort / cycle detection
 - [ ] Explain cycle detection — [Topological Sort](https://leetcode.com/discuss/study-guide/1786329/topological-sort-for-beginners)
 - [ ] Identify failure cases
+- [ ] Solve [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) — DP fundamentals
+- [ ] Solve [Coin Change](https://leetcode.com/problems/coin-change/) — Classic DP (unbounded knapsack)
+- [ ] Solve [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/) — 1D DP with binary search optimization
+- [ ] **Pattern note:** Write DP framework: 1) Define state, 2) Recurrence relation, 3) Base case, 4) Order of computation
+- [ ] Study [DP Patterns Guide](https://leetcode.com/discuss/study-guide/458695/Dynamic-Programming-Patterns) — Identify the 5 main DP patterns
 
 ---
 
 ### Wednesday — System Design
-**Goal:** Real-world system
+**Goal:** Real-world system & data pipeline
 
 - [ ] Design **IoT Data Ingestion System**
 - [ ] Handle throughput — [Time Series DB](https://www.influxdata.com/time-series-database/)
 - [ ] Ensure idempotency
 - [ ] Plan horizontal scaling
+- [ ] Design the ingestion pipeline: devices → gateway → queue → processors → storage
+- [ ] Discuss time-series partitioning and retention policies
+- [ ] **Concept deep dive:** Study consistent hashing for partition assignment — [Guide](https://www.toptal.com/big-data/consistent-hashing)
 
 ---
 
@@ -340,19 +379,30 @@
 
 ---
 
-## Week 7 — Mock Interviews
+## Week 7 — Heap, Stack & Mock Interviews
 
 ### Monday — Coding
-- [ ] Timed solve: [Clone Graph](https://leetcode.com/problems/clone-graph/)
-- [ ] 45 minutes solving
-- [ ] 15 minutes reviewing mistakes
+**Goal:** Heaps, Stacks & Intervals + Mock
+
+- [ ] Solve [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/) — Heap / bucket sort
+- [ ] Solve [Merge Intervals](https://leetcode.com/problems/merge-intervals/) — Interval pattern
+- [ ] Solve [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) — Stack fundamentals
+- [ ] Solve [Daily Temperatures](https://leetcode.com/problems/daily-temperatures/) — Monotonic stack
+- [ ] Timed mock (45 min): [Clone Graph](https://leetcode.com/problems/clone-graph/)
+- [ ] 15 minutes reviewing mistakes and writing down patterns used
 
 ---
 
 ### Wednesday — System Design
+**Goal:** Full mock — Chat / Real-time system
+
+- [ ] Full mock: **Design a Chat System (WhatsApp/Slack)**
+- [ ] Address: WebSocket connections, presence service, message storage
+- [ ] Discuss: message ordering guarantees, read receipts, group chat fan-out
 - [ ] Full mock: **Real-time Tracking System**
 - [ ] Identify missed risks
 - [ ] Identify overengineering
+- [ ] **Practice:** Do both designs under 45-minute time constraint
 
 ---
 
@@ -362,17 +412,27 @@
 
 ---
 
-## Week 8 — Polish
+## Week 8 — Advanced Patterns & Polish
 
 ### Monday — Coding
-- [ ] Re-solve hardest problem
-- [ ] Focus on explanation clarity
+**Goal:** Fill gaps & re-solve hardest problems
+
+- [ ] Solve [LRU Cache](https://leetcode.com/problems/lru-cache/) — HashMap + Doubly Linked List (very common in interviews)
+- [ ] Solve [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/) — Binary search (Hard)
+- [ ] Re-solve the 3 hardest problems from previous weeks without looking at notes
+- [ ] Focus on explanation clarity — record yourself explaining one solution
+- [ ] **Final review:** Go through all pattern notes written in weeks 1-7
 
 ---
 
 ### Wednesday — System Design
-- [ ] Review top 3 system designs
+**Goal:** Review & prepare reusable templates
+
+- [ ] Review top 3 system designs from previous weeks
 - [ ] Prepare default architecture template — [Template](https://github.com/donnemartin/system-design-primer#system-design-interview-questions-with-solutions)
+- [ ] Design **Search Autocomplete / Typeahead** — [Guide](https://www.educative.io/courses/grokking-modern-system-design-interview-for-engineers-managers/system-design-the-typeahead-suggestion-system) — Trie + caching pattern
+- [ ] Prepare a "go-to" component list you can draw from memory (see [system-design/templates.md](system-design/templates.md))
+- [ ] **Final review:** Practice explaining any previous design in 5 minutes (elevator pitch)
 
 ---
 
@@ -632,19 +692,22 @@ Every **Friday (15 min)** — assess the week and adjust:
 If you have less than 8 weeks, focus on **highest impact items**:
 
 ### 1 Week Available
-- [ ] Solve: Two Sum, Valid Anagram, LCA
-- [ ] Design: URL Shortener only
+- [ ] Solve: Two Sum, Valid Anagram, LCA, Merge Intervals, LRU Cache
+- [ ] Design: URL Shortener only (nail the framework)
 - [ ] Behavioral: 3 STAR stories + "Tell me about yourself"
+- [ ] Review all pattern notes in [algorithm-patterns.md](algorithm-patterns.md)
 
 ### 2 Weeks Available
-- [ ] Solve: Two Sum, Longest Substring, Level Order Traversal, Number of Islands
+- [ ] Solve: Two Sum, 3Sum, Longest Substring, Level Order Traversal, Number of Islands, Coin Change, LRU Cache
 - [ ] Design: URL Shortener, Rate Limiter
 - [ ] Behavioral: 5 STAR stories covering all themes
+- [ ] Study pattern recognition table + system design building blocks
 
 ### 4 Weeks Available
 - [ ] Complete Weeks 1, 2, 5, 7 from this plan
-- [ ] Skip Weeks 3, 4, 6
+- [ ] Add Week 6 Monday (DP) — most commonly tested
 - [ ] Focus on mock interviews in final week
+- [ ] Review [algorithm-patterns.md](algorithm-patterns.md) and [system-design/templates.md](system-design/templates.md)
 
 ---
 
