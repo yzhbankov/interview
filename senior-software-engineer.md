@@ -1,9 +1,15 @@
 # Interview Preparation Plan (8 Weeks)
 
+**Target:** Senior Software Engineer at Big Tech (FAANG-level)
+
 **Schedule**
 - **Monday 10:30–11:30** — Coding / Algorithms
+- **Tuesday 10:30–11:30** — Coding / Algorithms (second session)
 - **Wednesday 8:00–9:00** — System Design
 - **Thursday 10:00–11:00** — Behavioral / Review
+- **Saturday 10:00–11:30** — Weekly mock interview (coding or system design, alternating)
+
+> **Why 5 sessions?** Big tech interviews require ~100+ problems solved and 8-10 system designs practiced. 3 hrs/week is not enough to build pattern fluency. The Saturday mock builds interview stamina early — don't wait until Week 7.
 
 ## Resources
 
@@ -173,6 +179,13 @@
 - [ ] Solve [Group Anagrams](https://leetcode.com/problems/group-anagrams/) — HashMap with custom keys
 - [ ] **Pattern note:** Write when to use HashMap vs sorting for lookup problems
 
+### Tuesday — Coding
+**Goal:** Arrays continued — prefix sums, Kadane's
+
+- [ ] Solve [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/) — prefix/suffix pattern
+- [ ] Solve [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) — Kadane's algorithm
+- [ ] Solve [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) — single pass min tracking
+
 ---
 
 ### Wednesday — System Design
@@ -196,6 +209,9 @@
 - [x] Limit each story to 8–10 sentences
 - [ ] Identify 1 weak answer
 
+### Saturday — Mock
+- [ ] Timed coding mock (45 min): solve 2 medium problems back-to-back, explain out loud
+
 ---
 
 ## Week 2
@@ -211,6 +227,15 @@
 - [ ] Solve [Container With Most Water](https://leetcode.com/problems/container-with-most-water/) — Greedy two pointers
 - [ ] Solve [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/) — Advanced sliding window (Hard)
 - [ ] **Pattern note:** Write the sliding window template (expand right, shrink left, track answer)
+
+### Tuesday — Coding
+**Goal:** Linked Lists — critical gap for big tech
+
+- [ ] Solve [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) — Must-know iterative + recursive
+- [ ] Solve [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) — Merge pattern
+- [ ] Solve [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/) — Floyd's cycle detection (fast/slow pointers)
+- [ ] Solve [Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) — Two-pointer gap technique
+- [ ] **Pattern note:** Write linked list pointer manipulation patterns (prev/curr/next)
 
 ---
 
@@ -232,6 +257,9 @@
 - [x] Describe how it was fixed
 - [x] Answer: What would you do differently?
 
+### Saturday — Mock
+- [ ] Timed system design mock (45 min): Design a URL Shortener from scratch without notes
+
 ---
 
 ## Week 3
@@ -247,18 +275,28 @@
 - [ ] Solve [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) — Modified binary search
 - [ ] **Pattern note:** Write the binary search template (left, right, mid, when to move which pointer)
 
+### Tuesday — Coding
+**Goal:** More Trees — these come up constantly at Google/Meta
+
+- [ ] Solve [Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/) — Recursive fundamentals
+- [ ] Solve [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/) — DFS base case practice
+- [ ] Solve [Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/) — Hard, very common at big tech
+- [ ] Solve [Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/) — Inorder traversal application
+
 ---
 
 ### Wednesday — System Design
 **Goal:** Async processing & notification systems
 
-- [x] Design **Notification System** — [Guide](https://www.educative.io/courses/grokking-modern-system-design-interview-for-engineers-managers/system-design-web-crawler)
+- [x] Design **Notification System** — [Guide](https://www.educative.io/courses/grokking-modern-system-design-interview-for-engineers-managers/system-design-the-notification-service)
 - [x] Describe fan-out strategy
 - [x] Define retry handling
 - [x] Handle deduplication
 - [ ] Compare fan-out-on-write vs fan-out-on-read (and hybrid approach)
 - [ ] Design priority queues for urgent vs non-urgent notifications
 - [ ] Discuss exactly-once delivery guarantees and idempotency keys
+
+> **Note:** The original guide link was pointing to the web crawler design — fixed above.
 
 ---
 
@@ -268,6 +306,9 @@
 - [x] Answer: Disagree and commit
 - [x] Explain how you influenced the decision
 - [x] Describe the outcome
+
+### Saturday — Mock
+- [ ] Timed coding mock (45 min): 1 medium tree problem + 1 medium binary search problem, no hints
 
 ---
 
@@ -283,6 +324,14 @@
 - [ ] Solve [Combination Sum](https://leetcode.com/problems/combination-sum/) — Backtracking with pruning
 - [ ] Solve [Word Search](https://leetcode.com/problems/word-search/) — Backtracking on grid
 - [ ] **Pattern note:** Write the backtracking template (choose → explore → un-choose)
+
+### Tuesday — Coding
+**Goal:** Strings & Intervals — high frequency at big tech
+
+- [ ] Solve [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/) — Two pointers on strings
+- [ ] Solve [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/) — Expand from center
+- [ ] Solve [Merge Intervals](https://leetcode.com/problems/merge-intervals/) — Sorting + merge pattern
+- [ ] Solve [Insert Interval](https://leetcode.com/problems/insert-interval/) — Interval manipulation
 
 ---
 
@@ -304,6 +353,11 @@
 
 - [x] Write STAR: Mentoring a junior engineer
 - [x] Describe impact on the team
+- [ ] Write STAR: Led a technical decision that others initially disagreed with
+- [ ] Prepare "Why do you want to work at [target company]?" answer
+
+### Saturday — Mock
+- [ ] Timed system design mock (45 min): Design a Rate Limiter from scratch without notes
 
 ---
 
@@ -318,6 +372,15 @@
 - [ ] Solve [Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/) — Multi-source BFS
 - [ ] Solve [Redundant Connection](https://leetcode.com/problems/redundant-connection/) — Union-Find pattern
 - [ ] **Pattern note:** Write Union-Find template (find with path compression, union by rank)
+
+### Tuesday — Coding
+**Goal:** Graph shortest path & topological sort — Google/Meta favorites
+
+- [ ] Solve [Course Schedule](https://leetcode.com/problems/course-schedule/) — Topological sort / cycle detection
+- [ ] Solve [Course Schedule II](https://leetcode.com/problems/course-schedule-ii/) — Build the ordering
+- [ ] Solve [Network Delay Time](https://leetcode.com/problems/network-delay-time/) — Dijkstra's algorithm (weighted graph)
+- [ ] Solve [Clone Graph](https://leetcode.com/problems/clone-graph/) — BFS/DFS with HashMap for visited
+- [ ] **Pattern note:** Write Dijkstra template (priority queue + distances dict)
 
 ---
 
@@ -339,89 +402,125 @@
 
 - [ ] Answer: Handling vague requirements
 - [ ] Emphasize structure and decision-making
+- [ ] Write STAR: Time you drove a project with unclear scope to completion
+- [ ] Prepare answers for "What is your biggest weakness?" (have a genuine, non-cliché answer)
+
+### Saturday — Mock
+- [ ] Timed coding mock (45 min): 1 graph + 1 backtracking problem, explain approach before coding
 
 ---
 
 ## Week 6
 
 ### Monday — Coding
-**Goal:** Dynamic Programming & Topological Sort
+**Goal:** Dynamic Programming — the hardest pattern, needs dedicated focus
 
-- [ ] Solve [Course Schedule](https://leetcode.com/problems/course-schedule/) — Topological sort / cycle detection
-- [ ] Explain cycle detection — [Topological Sort](https://leetcode.com/discuss/study-guide/1786329/topological-sort-for-beginners)
-- [ ] Identify failure cases
 - [ ] Solve [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) — DP fundamentals
 - [ ] Solve [Coin Change](https://leetcode.com/problems/coin-change/) — Classic DP (unbounded knapsack)
 - [ ] Solve [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/) — 1D DP with binary search optimization
 - [ ] **Pattern note:** Write DP framework: 1) Define state, 2) Recurrence relation, 3) Base case, 4) Order of computation
 - [ ] Study [DP Patterns Guide](https://leetcode.com/discuss/study-guide/458695/Dynamic-Programming-Patterns) — Identify the 5 main DP patterns
 
+### Tuesday — Coding
+**Goal:** DP continued — 2D DP and string DP (very common at big tech)
+
+- [ ] Solve [Unique Paths](https://leetcode.com/problems/unique-paths/) — Grid DP
+- [ ] Solve [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/) — 2D string DP
+- [ ] Solve [Edit Distance](https://leetcode.com/problems/edit-distance/) — Hard, classic big tech problem
+- [ ] Solve [House Robber](https://leetcode.com/problems/house-robber/) — Decision DP (take or skip)
+- [ ] Solve [Word Break](https://leetcode.com/problems/word-break/) — DP + HashSet
+
 ---
 
 ### Wednesday — System Design
-**Goal:** Real-world system & data pipeline
+**Goal:** News Feed — one of the most asked designs at Meta/Google/Amazon
 
-- [ ] Design **IoT Data Ingestion System**
-- [ ] Handle throughput — [Time Series DB](https://www.influxdata.com/time-series-database/)
-- [ ] Ensure idempotency
-- [ ] Plan horizontal scaling
-- [ ] Design the ingestion pipeline: devices → gateway → queue → processors → storage
-- [ ] Discuss time-series partitioning and retention policies
+- [ ] Design **News Feed System (Instagram/Twitter)** — [Guide](https://github.com/donnemartin/system-design-primer#design-the-twitter-timeline-and-search)
+- [ ] Compare fan-out-on-write vs fan-out-on-read vs hybrid
+- [ ] Design the feed ranking/scoring service
+- [ ] Handle celebrity problem (users with millions of followers)
+- [ ] Discuss cache warming and feed pre-computation
+- [ ] Address feed pagination and real-time updates
 - [ ] **Concept deep dive:** Study consistent hashing for partition assignment — [Guide](https://www.toptal.com/big-data/consistent-hashing)
 
 ---
 
 ### Thursday — Behavioral
-**Goal:** Handling pressure
+**Goal:** Handling pressure & cross-team collaboration
 
-- [ ] Answer: Most stressful situation
-- [ ] Explain prioritization and reasoning
+- [ ] Answer: Most stressful situation — explain prioritization and reasoning
+- [ ] Write STAR: Time you had to coordinate across multiple teams
+- [ ] Write STAR: Time you had to push back on unrealistic deadlines
+- [ ] Prepare "Questions to ask the interviewer" list (5-10 strong questions)
+
+### Saturday — Mock
+- [ ] Timed system design mock (45 min): Design a News Feed from scratch
 
 ---
 
-## Week 7 — Heap, Stack & Mock Interviews
+## Week 7 — Heap, Stack, OOD & Mock Interviews
 
 ### Monday — Coding
-**Goal:** Heaps, Stacks & Intervals + Mock
+**Goal:** Heaps & Stacks — pattern mastery
 
 - [ ] Solve [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/) — Heap / bucket sort
-- [ ] Solve [Merge Intervals](https://leetcode.com/problems/merge-intervals/) — Interval pattern
+- [ ] Solve [Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/) — Two heaps (Hard, common at Amazon/Google)
 - [ ] Solve [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) — Stack fundamentals
 - [ ] Solve [Daily Temperatures](https://leetcode.com/problems/daily-temperatures/) — Monotonic stack
-- [ ] Timed mock (45 min): [Clone Graph](https://leetcode.com/problems/clone-graph/)
+- [ ] Solve [Largest Rectangle in Histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/) — Monotonic stack (Hard)
+
+### Tuesday — Coding
+**Goal:** LRU Cache & Object-Oriented Design — Amazon/Google favorites
+
+- [ ] Solve [LRU Cache](https://leetcode.com/problems/lru-cache/) — HashMap + Doubly Linked List (asked at almost every big tech company)
+- [ ] Solve [Min Stack](https://leetcode.com/problems/min-stack/) — Design with constraints
+- [ ] Solve [Implement Queue using Stacks](https://leetcode.com/problems/implement-queue-using-stacks/) — Data structure design
+- [ ] Timed mock (45 min): pick 2 random mediums from previous weeks, solve without notes
 - [ ] 15 minutes reviewing mistakes and writing down patterns used
 
 ---
 
 ### Wednesday — System Design
-**Goal:** Full mock — Chat / Real-time system
+**Goal:** Full mock — Chat system + Distributed Key-Value Store
 
 - [ ] Full mock: **Design a Chat System (WhatsApp/Slack)**
 - [ ] Address: WebSocket connections, presence service, message storage
 - [ ] Discuss: message ordering guarantees, read receipts, group chat fan-out
-- [ ] Full mock: **Real-time Tracking System**
-- [ ] Identify missed risks
-- [ ] Identify overengineering
-- [ ] **Practice:** Do both designs under 45-minute time constraint
+- [ ] Full mock: **Design a Distributed Key-Value Store**
+- [ ] Cover: consistent hashing, replication, conflict resolution (vector clocks), gossip protocol
+- [ ] Discuss: read/write quorum (W + R > N), tunable consistency
+- [ ] **Practice:** Do both designs under 45-minute time constraint each
 
 ---
 
 ### Thursday — Behavioral
 - [ ] Answer 5 random behavioral questions — [Question List](https://www.techinterviewhandbook.org/behavioral-interview-questions/)
-- [ ] Speak only (no writing)
+- [ ] Speak only (no writing) — record yourself and review
+- [ ] Practice "Tell me about yourself" — time to under 90 seconds
+- [ ] Practice "Why are you leaving your current job?" — keep positive, forward-looking
+
+### Saturday — Mock
+- [ ] Full mock interview simulation: 1 coding (45 min) + 1 system design (45 min) + 1 behavioral (30 min) back-to-back
 
 ---
 
 ## Week 8 — Advanced Patterns & Polish
 
 ### Monday — Coding
-**Goal:** Fill gaps & re-solve hardest problems
+**Goal:** Hard problems & re-solves — build confidence on hard-tier
 
-- [ ] Solve [LRU Cache](https://leetcode.com/problems/lru-cache/) — HashMap + Doubly Linked List (very common in interviews)
 - [ ] Solve [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/) — Binary search (Hard)
+- [ ] Solve [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/) — Two pointers / monotonic stack (Hard, extremely common)
 - [ ] Re-solve the 3 hardest problems from previous weeks without looking at notes
 - [ ] Focus on explanation clarity — record yourself explaining one solution
+
+### Tuesday — Coding
+**Goal:** Final pattern review & speed drills
+
+- [ ] Re-solve 5 problems (one per category: array, tree, graph, DP, design) in under 20 min each
 - [ ] **Final review:** Go through all pattern notes written in weeks 1-7
+- [ ] Review [algorithm-patterns.md](algorithm-patterns.md) end-to-end
+- [ ] Write a 1-page "cheat sheet" of your personal weak spots and how to handle them
 
 ---
 
@@ -438,7 +537,71 @@
 
 ### Thursday — Behavioral
 - [ ] Finalize "Tell me about yourself" — [Guide](https://www.techinterviewhandbook.org/self-introduction/)
-- [ ] Finalize top 5 STAR stories
+- [ ] Finalize top 6-8 STAR stories (must cover: leadership, failure, conflict, mentorship, ambiguity, impact)
+- [ ] Prepare "Questions to ask the interviewer" — have 3-5 per round
+- [ ] Practice every story aloud, time each to under 2 minutes
+
+### Saturday — Final Mock
+- [ ] Full mock interview day: simulate a real big tech on-site loop
+  - [ ] Round 1: Coding (45 min) — 2 medium/hard problems
+  - [ ] Round 2: System Design (45 min) — random design from the plan
+  - [ ] Round 3: Behavioral (30 min) — 4-5 random behavioral questions
+  - [ ] Debrief: write down top 3 things to improve before real interview
+
+---
+
+## Big Tech Interview-Specific Notes
+
+### What Big Tech Expects at Senior Level
+Big tech (Google, Meta, Amazon, Apple, Microsoft) evaluates seniors differently than startups:
+
+| Dimension | What They Look For |
+|-----------|-------------------|
+| **Coding** | Not just solving — clear communication, optimal solution, clean code, testing edge cases |
+| **System Design** | Driving the conversation, making trade-offs with justification, going deep on components |
+| **Behavioral** | Leadership without authority, influence, handling ambiguity, scaling yourself through others |
+| **Bar** | You should be able to solve 2 medium problems in 45 min, or 1 hard in 35 min |
+
+### Must-Know Problems (if you solve nothing else, solve these)
+These problems appear repeatedly across FAANG interviews:
+
+| # | Problem | Pattern | Difficulty |
+|---|---------|---------|------------|
+| 1 | [Two Sum](https://leetcode.com/problems/two-sum/) | HashMap | Easy |
+| 2 | [LRU Cache](https://leetcode.com/problems/lru-cache/) | HashMap + DLL | Medium |
+| 3 | [Merge Intervals](https://leetcode.com/problems/merge-intervals/) | Sorting | Medium |
+| 4 | [Number of Islands](https://leetcode.com/problems/number-of-islands/) | BFS/DFS | Medium |
+| 5 | [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) | Sliding Window | Medium |
+| 6 | [Coin Change](https://leetcode.com/problems/coin-change/) | DP | Medium |
+| 7 | [Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/) | Tree DFS | Medium |
+| 8 | [Course Schedule](https://leetcode.com/problems/course-schedule/) | Topological Sort | Medium |
+| 9 | [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) | Linked List | Easy |
+| 10 | [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/) | Two Pointers / Stack | Hard |
+| 11 | [Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/) | Tree BFS/DFS | Hard |
+| 12 | [Word Break](https://leetcode.com/problems/word-break/) | DP | Medium |
+| 13 | [Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/) | Two Heaps | Hard |
+| 14 | [3Sum](https://leetcode.com/problems/3sum/) | Two Pointers | Medium |
+| 15 | [Edit Distance](https://leetcode.com/problems/edit-distance/) | 2D DP | Hard |
+
+### Must-Know System Designs (top 8 for senior interviews)
+1. URL Shortener (covered Week 1)
+2. Rate Limiter (covered Week 2)
+3. News Feed / Timeline (covered Week 6)
+4. Chat System / Messaging (covered Week 7)
+5. Distributed Key-Value Store (covered Week 7)
+6. Search Autocomplete / Typeahead (covered Week 8)
+7. Notification System (covered Week 3)
+8. File Storage / Dropbox (covered Week 4)
+
+### Company-Specific Tips
+
+| Company | Focus Areas |
+|---------|-------------|
+| **Google** | Coding (2 rounds), system design depth, Googleyness (collaboration, humility) |
+| **Meta** | Coding speed (2 problems in 35 min), system design (scale-focused), behavioral (Meta values) |
+| **Amazon** | Leadership Principles (every round), system design (practical), coding (1-2 problems) |
+| **Apple** | Domain expertise, coding, system design, team fit (very culture-focused) |
+| **Microsoft** | Coding (whiteboard-style), system design, behavioral, hire/no-hire per round |
 
 ---
 
@@ -636,17 +799,20 @@ Use these prompts to find stories from your experience:
 | "We had a problem" | Change to "Our system was dropping 10% of requests during peak hours" |
 | "It was successful" | Change to "We shipped on time and reduced support tickets by 40%" |
 
-**Stories You Must Have Ready**
+**Stories You Must Have Ready (aim for all green by Week 7)**
 
-- [ ] Tell me about yourself (60-90 seconds)
+- [x] Tell me about yourself (60-90 seconds)
 - [ ] Biggest technical challenge
-- [ ] Time you failed / made a mistake
-- [ ] Conflict with teammate or manager
+- [x] Time you failed / made a mistake *(Session 2 — project timeline)*
+- [x] Conflict with teammate or manager *(Session 1)*
 - [ ] Led a project or initiative
-- [ ] Mentored someone
-- [ ] Handled ambiguous requirements
+- [x] Mentored someone *(Week 4)*
+- [x] Handled ambiguous requirements *(Session 3 — QA Platform)*
 - [ ] Why are you leaving current job?
-- [ ] Why do you want this role?
+- [ ] Why do you want this role? (customize per company)
+- [ ] Time you improved system performance or saved costs
+- [ ] Time you had to make a decision with incomplete information
+- [ ] Time you pushed back on a decision and were right (or wrong)
 
 ---
 
