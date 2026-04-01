@@ -175,16 +175,16 @@
 - [x] Write space complexity
 - [x] Describe one alternative approach
 - [x] (Optional) Solve [Valid Anagram](https://leetcode.com/problems/valid-anagram/)
-- [ ] Solve [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) — HashMap pattern reinforcement
-- [ ] Solve [Group Anagrams](https://leetcode.com/problems/group-anagrams/) — HashMap with custom keys
-- [ ] **Pattern note:** Write when to use HashMap vs sorting for lookup problems
+- [x] Solve [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) — HashMap pattern reinforcement
+- [x] Solve [Group Anagrams](https://leetcode.com/problems/group-anagrams/) — HashMap with custom keys
+- [x] **Pattern note:** Write when to use HashMap vs sorting for lookup problems
 
 ### Tuesday — Coding
 **Goal:** Arrays continued — prefix sums, Kadane's
 
-- [ ] Solve [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/) — prefix/suffix pattern
-- [ ] Solve [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) — Kadane's algorithm
-- [ ] Solve [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) — single pass min tracking
+- [x] Solve [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/) — prefix/suffix pattern
+- [x] Solve [Maximum Subarray](https://leetcode.com/problems/maximum-subarray/) — Kadane's algorithm
+- [x] Solve [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) — single pass min tracking
 
 ---
 
