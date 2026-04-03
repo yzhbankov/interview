@@ -222,9 +222,9 @@
 - [x] Solve [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
 - [x] Explain sliding window out loud — [Pattern Guide](https://leetcode.com/discuss/study-guide/657507/Sliding-Window-for-Beginners-Problems-or-Template-or-Sample-Solutions)
 - [x] List edge cases
-- [ ] Re-solve in under 20 minutes
-- [ ] Solve [3Sum](https://leetcode.com/problems/3sum/) — Two pointers on sorted array
-- [ ] Solve [Container With Most Water](https://leetcode.com/problems/container-with-most-water/) — Greedy two pointers
+- [x] Re-solve in under 20 minutes
+- [x] Solve [3Sum](https://leetcode.com/problems/3sum/) — Two pointers on sorted array
+- [x] Solve [Container With Most Water](https://leetcode.com/problems/container-with-most-water/) — Greedy two pointers
 - [ ] Solve [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/) — Advanced sliding window (Hard)
 - [ ] **Pattern note:** Write the sliding window template (expand right, shrink left, track answer)
 
