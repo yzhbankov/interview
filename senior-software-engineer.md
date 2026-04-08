@@ -231,10 +231,10 @@
 ### Tuesday — Coding
 **Goal:** Linked Lists — critical gap for big tech
 
-- [ ] Solve [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) — Must-know iterative + recursive
-- [ ] Solve [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) — Merge pattern
-- [ ] Solve [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/) — Floyd's cycle detection (fast/slow pointers)
-- [ ] Solve [Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) — Two-pointer gap technique
+- [x] Solve [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) — Must-know iterative + recursive
+- [x] Solve [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) — Merge pattern
+- [x] Solve [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/) — Floyd's cycle detection (fast/slow pointers)
+- [x] Solve [Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) — Two-pointer gap technique
 - [ ] **Pattern note:** Write linked list pointer manipulation patterns (prev/curr/next)
 
 ---
