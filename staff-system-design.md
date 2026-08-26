@@ -405,6 +405,9 @@ Don't when:        <2-3 conditions>
 Alternative:       <closest substitute + the one reason to switch>
 ```
 
+**Filled cards so far:** [system-design/components/](system-design/components/) — PostgreSQL, DynamoDB,
+plus a side-by-side decision table.
+
 **Minimum card set:**
 
 | Category | Cards |
