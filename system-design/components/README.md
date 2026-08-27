@@ -7,6 +7,8 @@ One card per storage/infra primitive, following the template in
 |----------|------|
 | Relational | [PostgreSQL](postgres.md) |
 | Key-value / document | [DynamoDB](dynamodb.md) |
+| Coordination | [Raft / Consensus](raft-consensus.md) |
+| Replication | [Read Replicas](read-replicas.md) |
 
 ---
 
@@ -28,6 +30,34 @@ One card per storage/infra primitive, following the template in
 **The decision in one sentence:** if you don't know your queries yet, or entities need to
 transact together, take Postgres; if you know the access pattern, it's key-based, and
 write volume is the thing that scares you, take DynamoDB.
+
+---
+
+## Side-by-side: Raft vs read replicas
+
+The same problem — keep N copies of data — with opposite answers. Naming which axis you
+are trading is most of the credit in a replication deep dive.
+
+| | Raft / consensus | Read replicas |
+|---|---|---|
+| **What it buys** | Linearizability and automatic failover | Read throughput and workload isolation |
+| **What it costs** | A quorum round trip on every write | Staleness, and read-your-writes breaking |
+| **Write path** | Leader + majority fsync before ack | Primary only; replicas replay after the fact |
+| **Reads** | Linearizable via ReadIndex or lease; naive leader reads are **stale** | Eventually consistent by construction |
+| **On failover** | Automatic, no data loss, no human | Manual or orchestrated; async means RPO > 0 |
+| **Node count effect** | More voters = **slower** writes (bigger quorum) | More replicas = more read capacity, more fan-out |
+| **Right cluster size** | 3, 5, or 7 voters — always odd | As many as fan-out allows; cascade past ~5–10 |
+| **Scales writes?** | No — one leader per group. Shard into many groups. | No — every replica applies every write |
+| **Scales data size?** | No | No — every replica is a full copy |
+| **Dominant cost** | fsync + RTT to a majority | N x storage and compute, plus transfer |
+| **Signature failure** | Election storm; quorum loss needs unsafe manual recovery | Lag spike from single-threaded apply; a dead replica's slot fills the primary's disk |
+| **Use it for** | Metadata, config, locks, leader election, shard assignment | Analytics, dashboards, exports, search indexing, warm standby |
+
+**The decision in one sentence:** if a wrong answer is worse than a slow answer, pay for
+consensus; if a slightly old answer is fine, take the replica and build the routing that
+sends writes-then-reads back to the primary.
+
+**What neither one does:** scale writes or reduce data size. Both of those are sharding.
 
 ---
 
