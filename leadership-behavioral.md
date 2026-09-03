@@ -65,8 +65,8 @@ Those eight cover roughly 80% of questions asked across all three role types.
 
 ### Story file template
 
-Add new stories under `star-stories/` using this shape — the two extra fields beyond STAR are
-what make a story survive follow-ups:
+Copy [`star-stories/TEMPLATE.md`](star-stories/TEMPLATE.md) for each new story. The two extra
+fields beyond STAR are what make a story survive follow-ups:
 
 ```markdown
 ## N. <Slot name>

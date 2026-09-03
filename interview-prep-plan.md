@@ -10,6 +10,17 @@ routes you into week by week.
 | Leadership & behavioral | [`leadership-behavioral.md`](leadership-behavioral.md), [`star-stories/`](star-stories/) | 1 × 60 min |
 | Mock / integration | this file, Part 4 | 1 × 90 min (Sat) |
 
+### How to use this repo
+
+| When | Open |
+|------|------|
+| **Right now, first time** | Part 0 and Part 1 below — the loop shapes and the altitude dial |
+| **Every session** | [`weeks/week-NN.md`](weeks/) for the current week — that page is self-contained |
+| **Every Friday, 15 min** | The [tracker](#part-6--progress-tracker) in this file |
+| **Writing a story** | [`leadership-behavioral.md`](leadership-behavioral.md) + [`star-stories/TEMPLATE.md`](star-stories/TEMPLATE.md) |
+| **Scoring a design** | [Rubric](staff-system-design.md#self-scoring-rubric-use-after-every-practice-problem) |
+| **Night before a real interview** | [Anti-patterns](leadership-behavioral.md#part-7--anti-patterns-that-cost-levels) and [Part 7](#part-7--before-the-loop-starts) below |
+
 **Assumptions this plan is built on** — change them and the plan still works, but adjust Part 5:
 
 - ~7 hours/week over 10 weeks (~70 hours total).
@@ -112,118 +123,28 @@ The half-step is what gets you the higher offer; the correct base level is what 
 
 ## Part 3 — The 10-week schedule
 
-Each week: **theme**, then the four tracks. Design weeks map 1:1 onto
-[`staff-system-design.md`](staff-system-design.md) Part 3, so read that file's week N alongside
-this file's week N.
+**The schedule lives in [`weeks/`](weeks/) — one page per week.** Open the current week and work
+top to bottom; everything for that day is in that one file.
 
----
+| Week | Theme | Design problem | Behavioral output |
+|:----:|-------|----------------|-------------------|
+| [1](weeks/week-01.md) | Baseline and calibration | URL shortener | Story inventory + gap list |
+| [2](weeks/week-02.md) | Replication, consensus, influence | Job scheduler | Influence without authority |
+| [3](weeks/week-03.md) | Partitioning, conflict at scale | Rate limiter (multi-tenant) | Altitude rewrites, "I was wrong" |
+| [4](weeks/week-04.md) | Caching, **people & delivery round** | News feed | The 10 lead questions |
+| [5](weeks/week-05.md) | Streaming, idempotency, pressure | Ad click aggregator | Saying no; scope traded |
+| [6](weeks/week-06.md) | Real-time, technical strategy | Chat | Multi-quarter direction |
+| [7](weeks/week-07.md) | Search/geo/OLAP, **project deep dive** | Uber proximity | Deep-dive package |
+| [8](weeks/week-08.md) | Multi-region, failure, cost | Retry storm; multi-region | Incident at staff altitude |
+| [9](weeks/week-09.md) | ML/AI design, team building | Recsys; RAG | Growing people, hiring bar |
+| [10](weeks/week-10.md) | Migration, platform, polish | 50 TB migration; platform | Three openers, questions |
 
-### Week 1 — Baseline and calibration
+Design weeks map 1:1 onto [`staff-system-design.md`](staff-system-design.md) Part 3, so the
+deeper reading list for week N is there if you want more than the week page carries.
 
-**Goal:** measure, don't study. You cannot aim the next 9 weeks without a baseline.
-
-- [ ] **Mon — Coding:** Arrays & hashing, timed. Two Sum, Group Anagrams, Product of Array Except Self. Note where fluency has decayed.
-- [ ] **Tue — Coding:** Two pointers & sliding window. 3Sum, Longest Substring Without Repeating Characters, Container With Most Water.
-- [ ] **Wed — Design:** `staff-system-design.md` Week 1. Component cards: Postgres, DynamoDB (already written — *review and self-quiz*, don't re-read). Timed 45-min: **URL shortener**, no notes.
-- [ ] **Thu — Leadership:** [`leadership-behavioral.md`](leadership-behavioral.md) § Story Portfolio. Map your 6 existing stories onto the 14-slot matrix. **Output: a written gap list.** This is the single most important behavioral task in the plan.
-- [ ] **Sat — Mock:** Coding mock, 45 min, 2 mediums back-to-back, out loud.
-- [ ] **Baseline scores to record:** rubric score on the URL shortener (`staff-system-design.md` Part 0), coding problems solved in time, behavioral gaps found.
-
----
-
-### Week 2 — Replication, consensus, and influence
-
-- [ ] **Mon — Coding:** Linked lists. Reverse, Merge Two Sorted, Cycle Detection, Remove Nth From End.
-- [ ] **Tue — Coding:** Stacks & queues. Valid Parentheses, Min Stack, Daily Temperatures (monotonic stack), Evaluate RPN.
-- [ ] **Wed — Design:** `staff-system-design.md` Week 2 — replication, consistency, consensus. Timed: **distributed job scheduler (exactly-once cron)**. Staff move: the three-line trade-off pattern.
-- [ ] **Thu — Leadership:** Write 2 stories — **influence without authority** and **driving alignment on a contentious technical decision**. Use the scoping ladder in `leadership-behavioral.md` § Drill 2.
-- [ ] **Sat — Mock:** System design mock — job scheduler, cold, 45 min.
-
----
-
-### Week 3 — Partitioning, and conflict at scale
-
-- [ ] **Mon — Coding:** Trees. Level Order Traversal, Validate BST, Lowest Common Ancestor, Diameter.
-- [ ] **Tue — Coding:** Tree DFS variants + Serialize/Deserialize Binary Tree.
-- [ ] **Wed — Design:** `staff-system-design.md` Week 3 — partitioning, sharding, hot keys. Timed: **rate limiter as shared multi-tenant infrastructure for 30 teams**. Staff move: blast radius.
-- [ ] **Thu — Leadership:** Rewrite your existing *conflict* and *tech stack decision* stories one altitude up (see Part 1 table). Then write the **"I was wrong and changed my mind"** story — an under-used, very high-signal answer.
-- [ ] **Sat — Mock:** Behavioral mock — 5 questions, 2 minutes each, recorded. Watch it back.
-
----
-
-### Week 4 — Caching, and the people/delivery round
-
-**This is the team-lead-critical week.** Even if you are targeting staff, do it — staff loops
-probe mentorship and delivery too.
-
-- [ ] **Mon — Coding:** Graphs. Number of Islands, Clone Graph, Course Schedule (topological sort).
-- [ ] **Tue — Coding:** Union-Find + Word Ladder (BFS on implicit graph).
-- [ ] **Wed — Design:** `staff-system-design.md` Week 4 — caching and the read path. Timed: **news feed / home timeline**. Component cards: Redis, CDN.
-- [ ] **Thu — Leadership:** [`leadership-behavioral.md`](leadership-behavioral.md) § People & Delivery Round. Prepare answers for: underperformance, delegation, hiring bar, prioritizing with a PM who wants everything, protecting a team from thrash. **Your hiring/onboarding story is a strong base — extend it.**
-- [ ] **Sat — Mock #1 (external if possible):** Full system design mock with a real person. Pramp / interviewing.io / a peer.
-
----
-
-### Week 5 — Streaming, idempotency, and delivery under pressure
-
-- [ ] **Mon — Coding:** Heaps. Kth Largest, Find Median from Data Stream, Top K Frequent, Merge K Sorted Lists.
-- [ ] **Tue — Coding:** Intervals. Merge Intervals, Insert Interval, Meeting Rooms II, Non-overlapping Intervals.
-- [ ] **Wed — Design:** `staff-system-design.md` Week 5 — messaging, streaming, idempotency. Timed: **ad click aggregator** (you have notes — measure altitude, not knowledge). Cards: Kafka, Flink.
-- [ ] **Thu — Leadership:** Two stories — **delivery under pressure / cutting scope** (extend your timeline-underestimation story) and **saying no to a stakeholder**. Both must end with a number.
-- [ ] **Sat — Mock:** Coding mock — 1 hard, 35 min.
-
----
-
-### Week 6 — Real-time systems, and technical strategy
-
-- [ ] **Mon — Coding:** Binary search + variants. Search in Rotated Sorted Array, Find Minimum in Rotated Array, Median of Two Sorted Arrays, Koko Eating Bananas (binary search on answer).
-- [ ] **Tue — Coding:** 1-D DP. Climbing Stairs, House Robber, Coin Change, Word Break, LIS.
-- [ ] **Wed — Design:** `staff-system-design.md` Week 6 — real-time, stateful connections, fanout. Timed: **chat / messaging**. Cards: WebSocket layer, pub/sub.
-- [ ] **Thu — Leadership:** Write the **technical strategy** story: a multi-quarter direction you set, the doc you wrote, who adopted it, and how you measured adoption. If you don't have one at org scale, write the honest team-scale version — *do not inflate it*, inflated scope collapses under follow-up questions.
-- [ ] **Sat — Mock:** System design mock — chat, cold.
-
----
-
-### Week 7 — Search/geo/OLAP, and the project deep dive
-
-**This is the staff-critical week.** The project deep dive is the round where staff offers are
-won and lost, and it is almost never practiced.
-
-- [ ] **Mon — Coding:** 2-D DP. Unique Paths, Longest Common Subsequence, Edit Distance.
-- [ ] **Tue — Coding:** Backtracking. Subsets, Permutations, Combination Sum, Word Search, N-Queens.
-- [ ] **Wed — Design:** `staff-system-design.md` Week 7 — search, geo, analytics. Timed: **Uber / proximity service**. Cards: Elasticsearch, geo index, OLAP store.
-- [ ] **Thu — Leadership:** [`leadership-behavioral.md`](leadership-behavioral.md) § Project Deep Dive. Build the full 45-minute package for **one** project: context, your specific role, architecture diagram you can redraw from memory, three decisions with alternatives, what went wrong, what you'd change, measured impact.
-- [ ] **Sat — Mock #2:** **Deep dive mock.** Have someone interrupt you with "why not X?" every five minutes. This is the actual format.
-
----
-
-### Week 8 — Multi-region, failure, cost, and failure stories
-
-- [ ] **Mon — Coding:** Tries + design problems. Implement Trie, Word Search II, LRU Cache.
-- [ ] **Tue — Coding:** Practical/API-flavored coding — this is what staff loops increasingly ask. Implement: an in-process rate limiter, a retry with exponential backoff and jitter, a bounded LRU with TTL. Clean interfaces, tests, no LeetCode tricks.
-- [ ] **Wed — Design:** `staff-system-design.md` Week 8 — multi-region, failure, cost. Timed: **retry storm / thundering herd remediation** and **multi-region active-active**.
-- [ ] **Thu — Leadership:** Failure track. Refine your **production incident** story to staff altitude: not just "I fixed it" but what you changed structurally so the class of failure ended, and what it cost. Add: a **postmortem culture** answer and a **decision I made with bad data** answer.
-- [ ] **Sat — Mock:** Behavioral + hiring-manager mock, 45 min, including "what are your questions for me?"
-
----
-
-### Week 9 — ML/AI design, and team building
-
-- [ ] **Mon — Coding:** Timed mixed set — 3 random mediums, 60 min, no hints.
-- [ ] **Tue — Coding:** Concurrency & OOD. Design a thread-safe bounded queue; design a parking lot / elevator with clean interfaces. Verbalize the class boundaries.
-- [ ] **Wed — Design:** `staff-system-design.md` Week 9 — ML/AI system design. Timed: **recommendation system** and one of **RAG pipeline** or **LLM serving**. Expect one of these in roughly half of 2026 loops.
-- [ ] **Thu — Leadership:** Team building. Hiring bar and interview calibration; onboarding (you have this one — sharpen the metric); growing an engineer to promotion; improving a broken process. Team-lead loops score these directly; staff loops probe them as "how do you scale yourself."
-- [ ] **Sat — Mock:** ML/AI system design mock, or a second external design mock.
-
----
-
-### Week 10 — Migration, platform, polish, and closing
-
-- [ ] **Mon — Coding:** Re-solve the 5 problems you got wrong or slow in Weeks 1–9, from memory.
-- [ ] **Tue — Coding:** 2 mediums in 45 minutes under strict time. That's the senior bar; confirm you clear it.
-- [ ] **Wed — Design:** `staff-system-design.md` Week 10 — migration and evolution. Timed: **migrate 50 TB across databases with zero downtime**, and **design an internal platform other teams adopt**. Migration questions are the purest staff signal there is.
-- [ ] **Thu — Leadership:** Final polish. Tell-me-about-yourself (3 versions: senior / lead / staff — see `leadership-behavioral.md` § Openers). Your questions for each interviewer type. Leveling and compensation framing.
-- [ ] **Sat — Mock #3:** Full simulated loop if you can arrange it: coding → design → behavioral, back to back, in one morning. Stamina is a real and testable variable.
+**The two weeks not to skip:** [Week 4](weeks/week-04.md) and [Week 7](weeks/week-07.md) — the
+people/delivery round and the project deep dive. They are the rounds that decide your level, and
+neither is covered by coding or design practice.
 
 ---
 
