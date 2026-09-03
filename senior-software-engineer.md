@@ -1,6 +1,13 @@
-# Interview Preparation Plan (8 Weeks)
+# Coding & Fundamentals Plan (8 Weeks)
 
 **Target:** Senior Software Engineer at Big Tech (FAANG-level)
+
+> This is the **coding track** of [`interview-prep-plan.md`](interview-prep-plan.md), plus the
+> original standalone senior plan. If you are running the master plan, take the problem sets and
+> the per-session guides from here and the weekly ordering from there — the master plan spreads
+> these patterns over 10 weeks alongside the design and leadership tracks. Coding still matters at
+> team-lead and staff level: the bar is one clean medium in ~25 minutes, plus practical/API-shaped
+> problems (see master plan, Week 8 Tuesday).
 
 **Schedule**
 - **Monday 10:30–11:30** — Coding / Algorithms
