@@ -1,12 +1,16 @@
-# Staff Engineer System Design Preparation Plan (10 Weeks)
+# System Design Preparation Plan — Senior / Team Lead / Staff (10 Weeks)
 
-A system-design-only plan targeting the **Staff / L6 / E6 / IC5** bar. It assumes you already
-pass the senior bar (you can run the 7-phase framework, estimate, and pick a database with
-justification — see [System Design Templates](system-design/templates.md)).
+The **system design track** of [`interview-prep-plan.md`](interview-prep-plan.md). It targets the
+**Staff / L6 / E6 / IC5** bar and dials *down* to the senior and team-lead bars on demand —
+see [Using this plan at three altitudes](#using-this-plan-at-three-altitudes) below.
 
-This plan is about the *delta*: what a staff candidate does that a strong senior does not.
+It assumes you already pass the senior bar (you can run the 7-phase framework, estimate, and pick
+a database with justification — see [System Design Templates](system-design/templates.md)), and it
+teaches the *delta*: what a staff candidate does that a strong senior does not, plus what a team
+lead adds that neither does.
 
-**Time budget:** 6–8 hours/week across 4 sessions. Total ~70 hours.
+**Time budget:** 6–8 hours/week across 4 sessions. Total ~70 hours. If you are running the full
+master plan, the design track is the Wednesday 90-minute block plus part of the Saturday mock.
 
 ---
 
@@ -14,7 +18,31 @@ This plan is about the *delta*: what a staff candidate does that a strong senior
 
 Read this section first, and re-read it before every mock. Most staff-level rejections are
 not technical gaps; they are altitude gaps — a correct senior-level answer delivered to a
-staff-level question.
+staff-level question. But the reverse error is just as costly: a strategy-heavy answer with no
+depth, given to a senior req, reads as someone who has stopped building.
+
+### Using this plan at three altitudes
+
+Run the same weekly material for any of the three targets; only the emphasis and the pass mark
+change.
+
+| | Senior SWE | Team Lead / TLM | Staff Engineer |
+|---|---|---|---|
+| **Pass mark on the Part 0 rubric** | 14+/24, nothing at 0 on rows 1–4 | 14+/24, plus a delivery plan | **16+/24 across three consecutive unseen problems** |
+| **Rows that carry the most weight** | 2, 3, 4 (quantification, depth, trade-offs) | 4, 6 (trade-offs, operability) plus staffing and sequencing | 1, 4, 5, 6 (scoping, trade-offs, blast radius, evolution) |
+| **What to add to every answer** | one real deep dive with internals | *who builds this, in what order, with what team shape, and what's the risk to the date* | *should we build this at all, what breaks at the next order of magnitude, and what does it cost* |
+| **Closing sentence** | "Here's the design and its main bottleneck." | "Here's the design, and here's what I'd have three engineers do in the first six weeks." | "Here's the design, here's the phase I'd build first, and here's the condition that would make me reverse the core decision." |
+
+**The team-lead lens** is the one this repo previously had no coverage of. Every week, after
+finishing session C, spend five minutes answering these four questions about the design you just
+produced — written, not just thought:
+
+1. **Sequencing** — what is the first shippable slice, and what does it prove?
+2. **Team shape** — how many engineers, split how, and what's the coordination cost between them?
+3. **Risk to the date** — which unknown most threatens the timeline, and how do you de-risk it in week 1?
+4. **Support cost** — once this is live, who is on call for it, and what wakes them up at 3am?
+
+Those four questions are the entire content of a team-lead design round beyond the senior bar.
 
 ### The senior → staff delta
 
@@ -42,7 +70,7 @@ staff-level question.
 
 ### Self-scoring rubric (use after every practice problem)
 
-Score 0–2 on each. **Staff bar is 16+/24, with nothing at 0.**
+Score 0–2 on each. **Staff bar is 16+/24, with nothing at 0. Senior and team-lead bar is 14+/24.** Team-lead candidates additionally score a 7th row: *sequencing and team shape* — 0 = not mentioned, 1 = phased plan, 2 = phased plan with team split, coordination cost, and the week-1 de-risking step.
 
 | # | Signal | 0 | 1 | 2 |
 |---|--------|---|---|---|
@@ -200,6 +228,10 @@ standard question banks.
 
 **Rule: never read the reference solution before your own attempt.** The value is entirely in
 the gap between your answer and theirs.
+
+**If you are also targeting team lead:** close every session C with the four-question lead lens
+(sequencing, team shape, risk to the date, support cost) from
+[Using this plan at three altitudes](#using-this-plan-at-three-altitudes). Five minutes, written.
 
 ---
 
