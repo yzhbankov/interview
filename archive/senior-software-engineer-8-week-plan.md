@@ -2,7 +2,7 @@
 
 **Target:** Senior Software Engineer at Big Tech (FAANG-level)
 
-> This is the **coding track** of [`interview-prep-plan.md`](interview-prep-plan.md), plus the
+> This is the **coding track** of [`interview-prep-plan.md`](../interview-prep-plan.md), plus the
 > original standalone senior plan. If you are running the master plan, take the problem sets and
 > the per-session guides from here and the weekly ordering from there — the master plan spreads
 > these patterns over 10 weeks alongside the design and leadership tracks. Coding still matters at
@@ -526,7 +526,7 @@
 
 - [ ] Re-solve 5 problems (one per category: array, tree, graph, DP, design) in under 20 min each
 - [ ] **Final review:** Go through all pattern notes written in weeks 1-7
-- [ ] Review [algorithm-patterns.md](algorithm-patterns.md) end-to-end
+- [ ] Review [algorithm-patterns.md](../algorithm-patterns.md) end-to-end
 - [ ] Write a 1-page "cheat sheet" of your personal weak spots and how to handle them
 
 ---
@@ -537,7 +537,7 @@
 - [ ] Review top 3 system designs from previous weeks
 - [ ] Prepare default architecture template — [Template](https://github.com/donnemartin/system-design-primer#system-design-interview-questions-with-solutions)
 - [ ] Design **Search Autocomplete / Typeahead** — [Guide](https://www.educative.io/courses/grokking-modern-system-design-interview-for-engineers-managers/system-design-the-typeahead-suggestion-system) — Trie + caching pattern
-- [ ] Prepare a "go-to" component list you can draw from memory (see [system-design/templates.md](system-design/templates.md))
+- [ ] Prepare a "go-to" component list you can draw from memory (see [system-design/templates.md](../system-design/templates.md))
 - [ ] **Final review:** Practice explaining any previous design in 5 minutes (elevator pitch)
 
 ---
@@ -868,7 +868,7 @@ If you have less than 8 weeks, focus on **highest impact items**:
 - [ ] Solve: Two Sum, Valid Anagram, LCA, Merge Intervals, LRU Cache
 - [ ] Design: URL Shortener only (nail the framework)
 - [ ] Behavioral: 3 STAR stories + "Tell me about yourself"
-- [ ] Review all pattern notes in [algorithm-patterns.md](algorithm-patterns.md)
+- [ ] Review all pattern notes in [algorithm-patterns.md](../algorithm-patterns.md)
 
 ### 2 Weeks Available
 - [ ] Solve: Two Sum, 3Sum, Longest Substring, Level Order Traversal, Number of Islands, Coin Change, LRU Cache
@@ -880,7 +880,7 @@ If you have less than 8 weeks, focus on **highest impact items**:
 - [ ] Complete Weeks 1, 2, 5, 7 from this plan
 - [ ] Add Week 6 Monday (DP) — most commonly tested
 - [ ] Focus on mock interviews in final week
-- [ ] Review [algorithm-patterns.md](algorithm-patterns.md) and [system-design/templates.md](system-design/templates.md)
+- [ ] Review [algorithm-patterns.md](../algorithm-patterns.md) and [system-design/templates.md](../system-design/templates.md)
 
 ---
 

@@ -1,12 +1,13 @@
-# Week 4 — Caching, and the people/delivery round
+# Week 4 — Cost and scope
 
-**Goal:** Cost modelling in design; the team-lead people round in behavioral. Do this week even if you are targeting staff — staff loops probe mentorship and delivery too.
+**Week of:** Mon 2 Nov 2026
+**Goal:** Put a dollar figure on a design. Get your first outside signal. Finish the stakeholder stories.
 
 **Due by Sunday**
 
-- [ ] News feed design + one-page cost model
-- [ ] Answers to the 10 people/delivery questions
-- [ ] Mock #1 booked and done with a human
+- [ ] News feed redo + one-page cost model + the AI extension
+- [ ] Story 11; timeline story refined
+- [ ] External mock booked and done
 
 | | | |
 |---|---|---|
@@ -14,83 +15,76 @@
 
 ---
 
-## Mon — Coding, 60 min · Graphs
+## Mon — Coding, 60 min · 2-D dynamic programming
 
-- [ ] [Number of Islands](https://leetcode.com/problems/number-of-islands/)
-- [ ] [Clone Graph](https://leetcode.com/problems/clone-graph/)
-- [ ] [Course Schedule](https://leetcode.com/problems/course-schedule/) — topological sort
+- [ ] [Unique Paths](https://leetcode.com/problems/unique-paths/)
+- [ ] [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/)
+- [ ] [Edit Distance](https://leetcode.com/problems/edit-distance/)
 
-*Done when:* You can write Kahn's algorithm from memory.
+*Done when:* you can draw the table and derive one cell aloud.
+
+## Tue — Coding, 60 min · Backtracking
+
+- [ ] [Subsets](https://leetcode.com/problems/subsets/) and [Permutations](https://leetcode.com/problems/permutations/)
+- [ ] [Combination Sum](https://leetcode.com/problems/combination-sum/)
+- [ ] [Word Search](https://leetcode.com/problems/word-search/)
+- [ ] Stretch: [N-Queens](https://leetcode.com/problems/n-queens/)
+
+*Done when:* choose / explore / un-choose is muscle memory.
 
 ---
 
-## Tue — Coding, 60 min · Union-Find & implicit graphs
+## Wed — System design, 90 min · News feed, with a price tag
 
-- [ ] [Number of Connected Components](https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/) — union-find with path compression
-- [ ] [Word Ladder](https://leetcode.com/problems/word-ladder/) — BFS on an implicit graph
-- [ ] [Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/)
-
-*Done when:* You can state when union-find beats DFS.
-
----
-
-## Wed — System design, 90 min
-
-### Study, 30 min
+**Study, 20 min**
 
 - [ ] [Builders' Library — Caching challenges and strategies](https://aws.amazon.com/builders-library/caching-challenges-and-strategies/)
-- [ ] Cache invalidation patterns, thundering herd, negative caching, TTL jitter
-- [ ] Component cards: **Redis**, **CDN**
+- [ ] Order-of-magnitude unit costs you can quote: object storage per TB-month, egress per TB, a cache node, a mid-size VM. Write them on an index card
 
-### Timed problem, 45 min — no notes, on paper
+**Timed, 35 min — no notes**
 
-**News feed / home timeline** — 45 min. Fanout-on-write vs fanout-on-read, and the hybrid for celebrity accounts.
+**News feed / home timeline**, redo from the summer. Fanout-on-write vs on-read and the celebrity hybrid. Spend the saved 10 minutes on the cost model below.
 
-### Staff move, 15 min · Cost modelling
+**Staff move, 15 min — cost model**
 
-One page: storage, cache footprint, egress, compute. Name the dominant line item and one change that halves it — then state what quality that change costs you.
+One page: storage, cache footprint, egress, compute. Name the dominant line item and one change that halves it, then say what quality that change costs.
 
-### Team-lead lens (5 min, if lead roles are in scope)
+**AI extension, 10 min — the 2026 follow-up**
 
-Sequencing · team shape · risk to the date · support cost —
-see [the four questions](../staff-system-design.md#using-this-plan-at-three-altitudes).
+*"Now add an LLM-generated 'what you missed' summary to the feed."* Where does the model call sit, sync or async? What happens when the model is down or slow? Cost per summary × DAU — is it affordable? What do you cache? This question is now common at the end of classic designs; practice bolting AI onto something that already works.
 
-### Review
+**Score, 10 min** — rubric, three misses, then the [team-lead four questions](../staff-system-design.md#using-this-plan-at-three-altitudes) in writing.
 
-Read a reference breakdown, list 3 misses. Then answer the [team-lead lens](../staff-system-design.md#using-this-plan-at-three-altitudes) four questions in writing.
-
-*Done when:* you have a rubric score out of 24 and three named misses.
+*Done when:* score, misses, a cost page with a dominant line item, and an answer to the AI extension.
 
 ---
 
-## Thu — Leadership & behavioral, 60 min · The people & delivery round
+## Thu — Behavioral, 60 min · Scope and stakeholders
 
-- [ ] Work [`leadership-behavioral.md` § Round B](../leadership-behavioral.md#round-b--people--delivery-team-lead--tlm--the-round-most-under-prepared) — answer all 10 out loud
-- [ ] Story 10 — **underperformance or difficult feedback**
-- [ ] Extend your [hiring & onboarding story](../star-stories/session-1-jan-22.md#4-hiring-and-onboarding) with the *hiring bar* decision: who you said no to, and why
-- [ ] Check every answer contains a **mechanism** — a cadence, a doc, a rubric, a dated plan — not just good intentions
+- [ ] **Story 11 — saying no / managing a demanding stakeholder**
+- [ ] Refine the [timeline story](../star-stories/session-2-project-timeline.md): add the number and the *scope you traded*
+- [ ] For both: *what happened to the thing you cut?* Interviewers ask; most candidates have no answer
 
-*Done when:* None of your answers to Round B sound like an IC who happens to help people.
+*Done when:* both end with a measurable outcome, not "we delivered on time".
 
 ---
 
 ## Fri — Review, 15 min
 
-- [ ] Fill this week's row in the [progress tracker](../interview-prep-plan.md#part-6--progress-tracker)
-- [ ] Name the one weakest thing this week
-- [ ] Pick one fix to apply next week — one, not five
+- [ ] Fill this week's row in the [tracker](../interview-prep-plan.md#part-6--progress-tracker)
+- [ ] One weakest thing; one fix
 
 ---
 
-## Sat — Mock, 90 min
+## Sat — Mock, 90 min · External design mock
 
-**Mock #1 — external.** Pramp / interviewing.io / a peer. Any Tier B problem. Ask explicitly to be scored at staff level.
+[interviewing.io](https://interviewing.io/), [Hello Interview](https://www.hellointerview.com/premium) or [Pramp](https://www.pramp.com/). Any Tier B problem you haven't done (Ticketmaster, payment ledger, Google Docs). Ask explicitly to be scored at staff level. If you can't book one, have your friend run **Ticketmaster** unseen.
 
 ---
 
 ## Week 4 gate
 
-You have a real outside score, and it either confirms or corrects your Week 1 self-assessment.
+You have a real outside score, and it confirms or corrects your Week 1 baseline.
 
 ---
 

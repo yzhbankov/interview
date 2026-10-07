@@ -1,12 +1,13 @@
-# Week 7 — Search/geo/OLAP, and the project deep dive
+# Week 7 — Migration, platform, and growing people
 
-**Goal:** The staff-critical week. The deep dive is where staff offers are won and lost, and it is almost never practiced.
+**Week of:** Mon 23 Nov 2026
+**Goal:** Migration questions are the purest staff signal. Finish the people stories and the weakness answer.
 
 **Due by Sunday**
 
-- [ ] Uber/proximity design
-- [ ] 90-second scope negotiation, rehearsed three ways
-- [ ] The full deep-dive package for one project
+- [ ] Zero-downtime migration design with rollback at every phase; platform design
+- [ ] Stories 13 and 14; weakness rehearsed
+- [ ] All 14 slots filled — count them
 
 | | | |
 |---|---|---|
@@ -14,87 +15,71 @@
 
 ---
 
-## Mon — Coding, 60 min · 2-D dynamic programming
+## Mon — Coding, 60 min · Mixed timed set
 
-- [ ] [Unique Paths](https://leetcode.com/problems/unique-paths/)
-- [ ] [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/)
-- [ ] [Edit Distance](https://leetcode.com/problems/edit-distance/)
+- [ ] 3 random mediums, 60 min total, no hints, no editorial until the end
+- [ ] Log the pattern and time for each
 
-*Done when:* You can draw the DP table and explain one cell's derivation.
+*Done when:* you know your honest medium-problem pace.
 
----
+## Tue — Coding, 60 min · Concurrency & object design
 
-## Tue — Coding, 60 min · Backtracking
+- [ ] Thread-safe bounded blocking queue — invariants first, then code
+- [ ] Parking lot or elevator: classes, interfaces, extension points. Verbalize every boundary
 
-- [ ] [Subsets](https://leetcode.com/problems/subsets/) and [Permutations](https://leetcode.com/problems/permutations/)
-- [ ] [Combination Sum](https://leetcode.com/problems/combination-sum/)
-- [ ] [Word Search](https://leetcode.com/problems/word-search/)
-- [ ] [N-Queens](https://leetcode.com/problems/n-queens/)
-
-*Done when:* The choose / explore / un-choose skeleton is muscle memory.
+*Done when:* you justify each class boundary by what it lets you change later.
 
 ---
 
-## Wed — System design, 90 min
+## Wed — System design, 90 min · Migration and platform
 
-### Study, 30 min
+**Study, 20 min**
 
-- [ ] Inverted indexes, index build pipelines, near-real-time indexing
-- [ ] Geospatial indexing: geohash, S2, quadtree
-- [ ] OLAP vs OLTP, columnar storage, pre-aggregation
-- [ ] Component cards: **Elasticsearch**, **geo index**, **OLAP store (ClickHouse/Druid)**
+- [ ] [Martin Fowler — Strangler Fig](https://martinfowler.com/bliki/StranglerFigApplication.html)
+- [ ] CDC vs dual writes, shadow reads, backfill + verify, cutover, rollback — one line each
 
-### Timed problem, 45 min — no notes, on paper
+**Timed, 45 min — two Tier C problems**
 
-**Uber / proximity matching service** — 45 min.
+1. *"Migrate 50 TB from MySQL to a distributed store with zero downtime."* (25 min)
+2. *"Design a platform 30 teams will build on."* (20 min) — interface contracts, guardrails vs gates, deprecation policy, where on-call load lands.
 
-### Staff move, 15 min · Scope negotiation
+**Staff move, 15 min — reversibility**
 
-Re-open the problem and practice **the opening five minutes only**, three different ways: narrow to matching · narrow to location ingestion · narrow to trip lifecycle. Each time state what you're cutting and why. Out loud, timed, until you can do it in 90 seconds.
+For the migration: the rollback at *each* phase, and the last point at which rollback is still cheap. Say it unprompted; it is the most staff-sounding sentence in a migration answer.
 
-### Team-lead lens (5 min, if lead roles are in scope)
+**Score, 10 min** — rubric on the migration, three misses.
 
-Sequencing · team shape · risk to the date · support cost —
-see [the four questions](../staff-system-design.md#using-this-plan-at-three-altitudes).
-
-### Review
-
-List 3 misses. Then pick the project you'll use for Thursday's deep dive.
-
-*Done when:* you have a rubric score out of 24 and three named misses.
+*Done when:* score, misses, and a phase table with a rollback column.
 
 ---
 
-## Thu — Leadership & behavioral, 60 min · The project deep dive (90 min — take the extra time)
+## Thu — Behavioral, 60 min · Growing people, bad data, weakness
 
-- [ ] Read [`leadership-behavioral.md` § Part 3](../leadership-behavioral.md#part-3--the-project-deep-dive-45-minutes-staff-critical)
-- [ ] Choose the project against the five criteria (you decided, it was ambiguous, something went wrong, there's a number, you can draw it)
-- [ ] Write the one-page brief covering all seven rows of the 45-minute structure
-- [ ] Draw the architecture from memory. Twice. No notes
-- [ ] Three decisions, each with: the alternative, the deciding factor, the reversal condition
-- [ ] Verify every number you plan to cite — never state one you can't defend two questions deep
+- [ ] **Story 13 — mentoring someone to a promotion / growing the team**. Staff framing: how you *scale yourself* — docs, defaults, review standards, things that outlived you
+- [ ] **Story 14 — a decision made with incomplete or bad data**
+- [ ] [Drill 5](../leadership-behavioral.md#drill-5--weakness-rehearsal): the real weakness, with the mechanism and the evidence it works
+- [ ] A 60-second answer to *"how do you and your team use AI tools, and where don't you trust them?"* — now a standard question; have a specific example of each
 
-*Done when:* You can run the whole 45 minutes without notes, and every number is defensible.
+*Done when:* all 14 slots in [Part 1](../leadership-behavioral.md#part-1--story-portfolio-the-14-slots) point at a written story.
 
 ---
 
 ## Fri — Review, 15 min
 
-- [ ] Fill this week's row in the [progress tracker](../interview-prep-plan.md#part-6--progress-tracker)
-- [ ] Name the one weakest thing this week
-- [ ] Pick one fix to apply next week — one, not five
+- [ ] Fill this week's row in the [tracker](../interview-prep-plan.md#part-6--progress-tracker)
+- [ ] One weakest thing; one fix
 
 ---
 
-## Sat — Mock, 90 min
+## Sat — Mock, 90 min · Behavioral + hiring manager
 
-**Mock #2 — deep dive.** Have someone interrupt with "why not X?" every five minutes. That is the actual format of the round.
+45 min with your friend as hiring manager, including *"what level do you think you're at?"*, *"walk me through your career"* and *"what are your questions for me?"* Then 45 min of Round C (staff influence) questions.
 
 ---
 
 ## Week 7 gate
 
-The deep dive survived hostile interruption without you losing the thread or inventing a number.
+Fourteen stories, and a two-sentence level answer that names scope, not years.
 
 ---
 

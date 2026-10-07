@@ -1,11 +1,13 @@
-# Week 6 — Real-time systems, and technical strategy
+# Week 6 — The project deep dive, and AI system design II
 
-**Goal:** Stateful tiers and operability. The multi-quarter direction story.
+**Week of:** Mon 16 Nov 2026
+**Goal:** The staff-critical week. The deep dive is where staff offers are won and lost and almost nobody practices it. Coding this week switches to the two new round formats.
 
 **Due by Sunday**
 
-- [ ] Chat design + operability spec
-- [ ] Story 12: technical strategy
+- [ ] The full deep-dive package for one project
+- [ ] LLM inference API design
+- [ ] One AI-assisted coding session with a written bug list
 
 | | | |
 |---|---|---|
@@ -13,84 +15,77 @@
 
 ---
 
-## Mon — Coding, 60 min · Binary search
+## Mon — Coding, 60 min · AI-assisted coding round
 
-- [ ] [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)
-- [ ] [Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)
-- [ ] [Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas/) — binary search on the answer
-- [ ] [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/)
+Follow [`coding-track.md` § AI-assisted coding round](../coding-track.md#ai-assisted-coding-round).
 
-*Done when:* You spot "binary search on the answer" from the phrase "minimum X such that".
+- [ ] Pick a ~2-hour-by-hand task (e.g. CSV log ingester reporting top-k errors per minute, with tests)
+- [ ] 45 min with Cursor / Claude Code / Copilot. **Narrate every prompt and every acceptance decision aloud**
+- [ ] 15 min: written list of every bug, missed edge case or bad design choice the tool produced, and what you did
 
----
+*Done when:* the bug list is non-empty and you ran at least one test you wrote yourself.
 
-## Tue — Coding, 60 min · 1-D dynamic programming
+## Tue — Coding, 60 min · Code comprehension
 
-- [ ] [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) → [House Robber](https://leetcode.com/problems/house-robber/)
-- [ ] [Coin Change](https://leetcode.com/problems/coin-change/)
-- [ ] [Word Break](https://leetcode.com/problems/word-break/)
-- [ ] [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)
+- [ ] Take ~500 lines of an open-source module you don't know
+- [ ] 25 min: explain its data flow aloud, from entry point to side effects
+- [ ] 20 min: find one real issue (race, unhandled error path, off-by-one) and fix it
+- [ ] 15 min: how would you extend it with one feature? Which boundary would you change?
 
-*Done when:* You can state the recurrence out loud before writing any code.
-
----
-
-## Wed — System design, 90 min
-
-### Study, 30 min
-
-- [ ] WebSocket / SSE / long-poll trade-offs, connection registry, sticky routing, reconnect storms
-- [ ] Pub/sub fanout topologies; fanout-on-write vs on-read hybrids
-- [ ] Component cards: **WebSocket layer**, **pub/sub**
-
-### Timed problem, 45 min — no notes, on paper
-
-**Chat system** at WhatsApp/Slack scale — 45 min.
-
-### Staff move, 15 min · Operability
-
-Specify: 3 SLIs with targets · the alert that fires first in an incident · the dashboard a responder opens · the deploy strategy for a stateful connection tier (you cannot just restart it) · the kill switch.
-
-### Team-lead lens (5 min, if lead roles are in scope)
-
-Sequencing · team shape · risk to the date · support cost —
-see [the four questions](../staff-system-design.md#using-this-plan-at-three-altitudes).
-
-### Review
-
-Read the Hello Interview chat breakdown + [Builders' Library — Implementing health checks](https://aws.amazon.com/builders-library/implementing-health-checks/).
-
-*Done when:* you have a rubric score out of 24 and three named misses.
+*Done when:* you read for 10 minutes before touching anything.
 
 ---
 
-## Thu — Leadership & behavioral, 60 min · Technical strategy
+## Wed — System design, 90 min · LLM inference API
 
-- [ ] Story 12 — **a multi-quarter technical direction you set**: the doc you wrote, who adopted it, how you measured adoption
-- [ ] If you have no org-scale version, write the honest team-scale one. **Do not inflate scope** — inflated scope collapses on the second follow-up question
-- [ ] Run the [follow-up gauntlet](../leadership-behavioral.md#drill-4--the-follow-up-gauntlet) on it
+**Study, 20 min**
 
-*Done when:* The story survives "who disagreed with this direction, and what did they say?"
+- [ ] Continuous batching, KV cache, token streaming, model tiering — the vocabulary, one line each
+- [ ] [techinterview.org — AI in system design interviews, 2026](https://www.techinterview.org/post/3233474919/ai-in-system-design-interviews-2026/) for what interviewers now probe
+
+**Timed, 45 min — no notes**
+
+**A multi-tenant LLM inference API** for an internal platform: streaming responses, per-team quotas and billing, routing across model tiers, behavior when the upstream provider degrades. This is 2026's URL shortener — expect it.
+
+**Staff move, 15 min — capacity and cost**
+
+Cost per million tokens: the dominant line item (GPU hours) and the two levers that halve it (batching, caching/tiering) with the latency each costs. Then multi-tenant isolation: how one team's batch job doesn't starve another's chat.
+
+**Score, 10 min** — rubric, three misses. Then pick the project for Thursday.
+
+*Done when:* score, misses, and a cost-per-million-tokens figure.
+
+---
+
+## Thu — Behavioral, 90 min · The project deep dive — take the extra 30 minutes
+
+- [ ] Read [`leadership-behavioral.md` § Part 3](../leadership-behavioral.md#part-3--the-project-deep-dive-45-minutes-staff-critical)
+- [ ] Choose the project against the five criteria: you decided, it was ambiguous, something went wrong, there's a number, you can draw it. The hardware/firmware/cloud system from the [timeline story](../star-stories/session-2-project-timeline.md) or the [QA platform](../star-stories/session-3-vague-requirements.md) are the obvious candidates
+- [ ] One-page brief covering all seven rows of the 45-minute structure
+- [ ] Draw the architecture from memory. Twice. No notes
+- [ ] Three decisions, each with: the alternative, the deciding factor, the reversal condition
+- [ ] Verify every number you plan to cite. Never state one you can't defend two questions deep
+
+*Done when:* you can run the whole 45 minutes without notes.
 
 ---
 
 ## Fri — Review, 15 min
 
-- [ ] Fill this week's row in the [progress tracker](../interview-prep-plan.md#part-6--progress-tracker)
-- [ ] Name the one weakest thing this week
-- [ ] Pick one fix to apply next week — one, not five
+- [ ] Fill this week's row in the [tracker](../interview-prep-plan.md#part-6--progress-tracker)
+- [ ] One weakest thing; one fix
 
 ---
 
-## Sat — Mock, 90 min
+## Sat — Mock, 90 min · Deep dive, with your friend
 
-**System design mock** — chat, cold. Mid-point altitude check against your Week 1 baseline.
+Hand your friend the five attack questions from Part 3 and ask them to interrupt with *"why not X?"* every five minutes. That is the real format of the round.
 
 ---
 
 ## Week 6 gate
 
-Design score has moved from your Week 1 baseline. If it hasn't, change the practice format — add a human.
+The deep dive survived hostile interruption without you losing the thread or inventing a number.
 
 ---
 
