@@ -45,20 +45,20 @@ Legend: **S** = needed for senior, **L** = team lead, **F** = staff.
 
 | # | Slot | Roles | Status in this repo |
 |---|------|-------|---------------------|
-| 1 | Production incident / on-call under pressure | S L F | ✅ [`session-1`](star-stories/session-1-jan-22.md#1-production-incident) — *needs staff-altitude rewrite (Week 8)* |
-| 2 | Conflict with a peer | S L F | ✅ [`session-1`](star-stories/session-1-jan-22.md#2-conflict-with-teammate) — *needs cross-team version (Week 3)* |
+| 1 | Production incident / on-call under pressure | S L F | ✅ [`session-1`](star-stories/session-1-jan-22.md#1-production-incident) — *needs staff-altitude rewrite (Week 5)* |
+| 2 | Conflict with a peer | S L F | ✅ [`session-1`](star-stories/session-1-jan-22.md#2-conflict-with-teammate) — *needs lead/staff version (Week 8)* |
 | 3 | Disagree and commit | S L F | ✅ [`session-1`](star-stories/session-1-jan-22.md#3-technology-stack-decision) — strong; add what you'd do differently |
-| 4 | Hiring & onboarding | L F | ✅ [`session-1`](star-stories/session-1-jan-22.md#4-hiring-and-onboarding) — extend with the hiring *bar* decision |
-| 5 | Timeline slip / cutting scope | S L F | ✅ [`session-2`](star-stories/session-2-project-timeline.md) — good reflection already; add the number |
+| 4 | Hiring & onboarding | L F | ✅ [`session-1`](star-stories/session-1-jan-22.md#4-hiring-and-onboarding) — extend with the hiring *bar* decision (Week 3) |
+| 5 | Timeline slip / cutting scope | S L F | ✅ [`session-2`](star-stories/session-2-project-timeline.md) — good reflection already; add the number (Week 4) |
 | 6 | Ambiguous requirements | S L F | ✅ [`session-3`](star-stories/session-3-vague-requirements.md) — strong staff signal, keep |
-| 7 | **Influence without authority** | L F | ❌ **gap — Week 2** |
+| 7 | **Influence without authority** | L F | ❌ **gap — Week 1** |
 | 8 | **Driving alignment on a contentious decision across teams** | F | ❌ **gap — Week 2** |
-| 9 | **I was wrong / changed my mind** | S L F | ❌ **gap — Week 3** |
-| 10 | **Underperformance or difficult feedback** | L | ❌ **gap — Week 4** |
-| 11 | **Saying no / managing a demanding stakeholder** | L F | ❌ **gap — Week 5** |
-| 12 | **Technical strategy set over multiple quarters** | F | ❌ **gap — Week 6** |
-| 13 | **Mentoring someone to a promotion / growing the team** | L F | ❌ **gap — Week 9** |
-| 14 | **Decision made with incomplete or bad data** | F | ❌ **gap — Week 8** |
+| 9 | **I was wrong / changed my mind** | S L F | ❌ **gap — Week 2** |
+| 10 | **Underperformance or difficult feedback** | L | ❌ **gap — Week 3** |
+| 11 | **Saying no / managing a demanding stakeholder** | L F | ❌ **gap — Week 4** |
+| 12 | **Technical strategy set over multiple quarters** | F | ❌ **gap — Week 5** |
+| 13 | **Mentoring someone to a promotion / growing the team** | L F | ❌ **gap — Week 7** |
+| 14 | **Decision made with incomplete or bad data** | F | ❌ **gap — Week 7** |
 
 **Minimum viable portfolio (if you're short on time):** 1, 2, 3, 5, 6, 7, 9, 11.
 Those eight cover roughly 80% of questions asked across all three role types.
@@ -94,6 +94,7 @@ I'd have chosen it instead.
 - Tell me about a time you had to deliver with incomplete information.
 - Tell me about feedback you received that changed how you work.
 - What's something you believe about engineering that most of your colleagues disagree with?
+- How do you use AI tools in your own work, and where don't you trust them? *(new in 2026 — have one concrete example of each)*
 
 ### Round B — People & delivery (team lead / TLM — the round most under-prepared)
 
@@ -107,6 +108,7 @@ I'd have chosen it instead.
 - Tell me about someone you hired who didn't work out. What did you learn about your own bar?
 - How much do you code as a lead, and how do you decide when to?
 - How do you protect the team from thrash without becoming a blocker?
+- How has AI-assisted development changed how your team reviews code, and what rule did you set?
 
 **The trap in this round:** answering as an individual contributor who happens to help people.
 Lead answers have *mechanisms* in them — a cadence, a document, a rubric, a plan with dates —

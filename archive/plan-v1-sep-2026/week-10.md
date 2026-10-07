@@ -10,7 +10,7 @@
 
 | | | |
 |---|---|---|
-| [Master plan](../interview-prep-plan.md) | [Week index](README.md) | [Rubric](../staff-system-design.md#self-scoring-rubric-use-after-every-practice-problem) |
+| [Master plan](../../interview-prep-plan.md) | [Week index](README.md) | [Rubric](../../staff-system-design.md#self-scoring-rubric-use-after-every-practice-problem) |
 
 ---
 
@@ -50,7 +50,7 @@ For the migration: what is the rollback at *each* phase, and what is the last po
 ### Team-lead lens (5 min, if lead roles are in scope)
 
 Sequencing · team shape · risk to the date · support cost —
-see [the four questions](../staff-system-design.md#using-this-plan-at-three-altitudes).
+see [the four questions](../../staff-system-design.md#using-this-plan-at-three-altitudes).
 
 ### Review
 
@@ -62,10 +62,10 @@ Re-score your **Week 1 URL shortener** answer against the rubric and compare to 
 
 ## Thu — Leadership & behavioral, 60 min · Final polish
 
-- [ ] Write all three [openers](../leadership-behavioral.md#part-5--openers): senior, lead, staff. 60–90 seconds each, out loud
-- [ ] Three [questions per interviewer type](../leadership-behavioral.md#part-6--questions-to-ask-them)
+- [ ] Write all three [openers](../../leadership-behavioral.md#part-5--openers): senior, lead, staff. 60–90 seconds each, out loud
+- [ ] Three [questions per interviewer type](../../leadership-behavioral.md#part-6--questions-to-ask-them)
 - [ ] Leveling and compensation framing — the two-sentence scope answer
-- [ ] Re-read the [anti-pattern table](../leadership-behavioral.md#part-7--anti-patterns-that-cost-levels) the night before any real loop
+- [ ] Re-read the [anti-pattern table](../../leadership-behavioral.md#part-7--anti-patterns-that-cost-levels) the night before any real loop
 
 *Done when:* You can open any interview in three different registers on demand.
 
@@ -73,7 +73,7 @@ Re-score your **Week 1 URL shortener** answer against the rubric and compare to 
 
 ## Fri — Review, 15 min
 
-- [ ] Fill this week's row in the [progress tracker](../interview-prep-plan.md#part-6--progress-tracker)
+- [ ] Fill this week's row in the [progress tracker](../../interview-prep-plan.md#part-6--progress-tracker)
 - [ ] Name the one weakest thing this week
 - [ ] Pick one fix to apply next week — one, not five
 
@@ -87,7 +87,7 @@ Re-score your **Week 1 URL shortener** answer against the rubric and compare to 
 
 ## Week 10 gate
 
-Check the [readiness gates](../interview-prep-plan.md#readiness-gates) for your target role. Every row true, or you know which row to work on.
+Check the [readiness gates](../../interview-prep-plan.md#readiness-gates) for your target role. Every row true, or you know which row to work on.
 
 ---
 

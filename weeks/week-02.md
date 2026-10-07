@@ -1,12 +1,12 @@
-# Week 2 — Replication, consensus, and influence
+# Week 2 — Trade-offs and influence
 
-**Goal:** Own trade-offs verbally. Start the influence stories — the biggest gap in your portfolio.
+**Week of:** Mon 19 Oct 2026
+**Goal:** Make the three-line trade-off automatic. Fill the two influence slots that staff loops probe hardest.
 
 **Due by Sunday**
 
-- [ ] Job scheduler design + three-line trade-off list
-- [ ] Story 7: influence without authority
-- [ ] Story 8: alignment on a contentious decision
+- [ ] Uber / proximity design, scored
+- [ ] Story 8 (alignment across teams) and story 9 (I was wrong)
 
 | | | |
 |---|---|---|
@@ -14,86 +14,73 @@
 
 ---
 
-## Mon — Coding, 60 min · Linked lists
+## Mon — Coding, 60 min · Heaps
 
-- [ ] [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) — iterative *and* recursive
-- [ ] [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/)
-- [ ] [Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/) — Floyd's
-- [ ] [Remove Nth Node From End](https://leetcode.com/problems/remove-nth-node-from-end-of-list/)
+- [ ] [Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/)
+- [ ] [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/)
+- [ ] [Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/) — two heaps
+- [ ] Stretch: [Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/)
 
-*Done when:* prev/curr/next manipulation is automatic, no diagram needed.
+*Done when:* "top k" and "streaming median" read as heap problems instantly.
 
----
+## Tue — Coding, 60 min · Intervals
 
-## Tue — Coding, 60 min · Stacks & monotonic stacks
+- [ ] [Merge Intervals](https://leetcode.com/problems/merge-intervals/)
+- [ ] [Insert Interval](https://leetcode.com/problems/insert-interval/)
+- [ ] [Meeting Rooms II](https://leetcode.com/problems/meeting-rooms-ii/)
+- [ ] [Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/)
 
-- [ ] [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)
-- [ ] [Min Stack](https://leetcode.com/problems/min-stack/)
-- [ ] [Daily Temperatures](https://leetcode.com/problems/daily-temperatures/) — monotonic stack
-- [ ] [Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation/)
-
-*Done when:* You can state the monotonic-stack trigger condition in one sentence.
+*Done when:* sort-by-start vs sort-by-end is a deliberate decision.
 
 ---
 
-## Wed — System design, 90 min
+## Wed — System design, 90 min · Uber / proximity
 
-### Study, 30 min
+**Study, 20 min**
 
-- [ ] DDIA Ch. 5 (replication) and Ch. 9 (consistency and consensus)
-- [ ] [Raft](https://raft.github.io/) — paper §5 plus the visualization
-- [ ] Kleppmann lectures 4–6 (consistency models, linearizability)
-- [ ] Component cards: **Raft/consensus**, **read replicas**
+- [ ] Geospatial indexing: geohash vs S2 vs quadtree — when each wins
+- [ ] Driver state machine and matching under contention (two riders, one driver)
 
-### Timed problem, 45 min — no notes, on paper
+**Timed, 45 min — no notes, on paper**
 
-**Distributed job scheduler** with exactly-once cron semantics — 45 min, cold.
+**Uber: location ingestion + nearby-driver matching.** Numbers first: drivers online, location updates/sec, match latency target.
 
-### Staff move, 15 min · Trade-off ownership
+**Staff move, 15 min — scope negotiation**
 
-For every choice: *what I chose* · *what I gave up* · *the condition under which I'd reverse it*. Three lines each. This is the single highest-value verbal habit for lead and staff interviews — drill it until it is automatic.
+Re-open the problem and do **the first five minutes only**, three ways: narrow to matching · narrow to location ingestion · narrow to trip lifecycle. Each time say what you're cutting and why. Out loud, timed, until it fits in 90 seconds.
 
-### Team-lead lens (5 min, if lead roles are in scope)
+**Score, 10 min** — rubric, three misses, then the reference breakdown.
 
-Sequencing · team shape · risk to the date · support cost —
-see [the four questions](../staff-system-design.md#using-this-plan-at-three-altitudes).
-
-### Review
-
-Read the [Hello Interview job scheduler breakdown](https://www.hellointerview.com/learn/system-design/problem-breakdowns/). List 3 misses.
-
-*Done when:* you have a rubric score out of 24 and three named misses.
+*Done when:* you have a score and can open the problem three different ways in 90 seconds each.
 
 ---
 
-## Thu — Leadership & behavioral, 60 min · Influence stories
+## Thu — Behavioral, 60 min · Influence stories
 
-- [ ] Story 7 — **influence without authority**: someone who didn't report to you changed what they were doing because of you
-- [ ] Story 8 — **alignment on a contentious decision**: two parties wanted different things and you reframed the decision
+- [ ] **Story 8 — alignment on a contentious decision across teams**: two parties wanted different things; you reframed the decision around something both owned
+- [ ] **Story 9 — I was wrong and changed my mind**: under-used, very high signal. What changed your mind, what it cost, what you do differently now
 - [ ] Run [Drill 3, the "so what?" ladder](../leadership-behavioral.md#drill-3--the-so-what-ladder) on both results
-- [ ] Use the [story template](../star-stories/TEMPLATE.md) — the *alternative I rejected* field is not optional
 
-*Done when:* Both stories end with a number and name someone who changed their behavior.
+*Done when:* both stories fit in 2 minutes spoken and end with a number.
 
 ---
 
 ## Fri — Review, 15 min
 
-- [ ] Fill this week's row in the [progress tracker](../interview-prep-plan.md#part-6--progress-tracker)
-- [ ] Name the one weakest thing this week
-- [ ] Pick one fix to apply next week — one, not five
+- [ ] Fill this week's row in the [tracker](../interview-prep-plan.md#part-6--progress-tracker)
+- [ ] One weakest thing; one fix
 
 ---
 
-## Sat — Mock, 90 min
+## Sat — Mock, 90 min · Coding
 
-**System design mock** — job scheduler, cold, 45 min. Ask to be scored at staff level.
+2 mediums back to back, 45 min, spoken aloud, plain editor. Pick from patterns you have *not* done this week. 15 min: what cost you time?
 
 ---
 
 ## Week 2 gate
 
-You can say the three-line trade-off pattern without thinking about it.
+You can say *chose / gave up / would reverse if* about any component without thinking about it.
 
 ---
 

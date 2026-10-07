@@ -1,4 +1,4 @@
-# System Design Preparation Plan — Senior / Team Lead / Staff (10 Weeks)
+# System Design Track — Senior / Team Lead / Staff
 
 The **system design track** of [`interview-prep-plan.md`](interview-prep-plan.md). It targets the
 **Staff / L6 / E6 / IC5** bar and dials *down* to the senior and team-lead bars on demand —
@@ -9,8 +9,8 @@ a database with justification — see [System Design Templates](system-design/te
 teaches the *delta*: what a staff candidate does that a strong senior does not, plus what a team
 lead adds that neither does.
 
-**Time budget:** 6–8 hours/week across 4 sessions. Total ~70 hours. If you are running the full
-master plan, the design track is the Wednesday 90-minute block plus part of the Saturday mock.
+**Time budget:** the Wednesday 90-minute block in [`weeks/`](weeks/) plus the design mocks on
+Saturdays (Weeks 1, 4, 8). This file is the reference; the schedule is there.
 
 ---
 
@@ -117,7 +117,7 @@ Score 0–2 on each. **Staff bar is 16+/24, with nothing at 0. Senior and team-l
 | [Martin Fowler — Architecture](https://martinfowler.com/architecture/) | Vocabulary for evolution, strangler fig, sacrificial architecture — directly useful for migration questions |
 | [The Pragmatic Engineer](https://newsletter.pragmaticengineer.com/) | Real-world scaling and incident write-ups; good for "have you seen this at scale" credibility |
 
-### Tier 3 — Foundations (background, weeks 1–5)
+### Tier 3 — Foundations (background reading)
 
 | Resource | Use |
 |----------|-----|
@@ -129,7 +129,7 @@ Score 0–2 on each. **Staff bar is 16+/24, with nothing at 0. Senior and team-l
 | [Kafka design docs](https://kafka.apache.org/documentation/#design) | Log-structured messaging, partitions, ISR, exactly-once semantics |
 | [Jepsen analyses](https://jepsen.io/analyses) | What consistency claims actually mean when tested. Excellent for trade-off credibility |
 
-### Tier 4 — ML / AI system design (2026: expect this in ~half of loops)
+### Tier 4 — ML / AI system design (expect one in most senior+ loops in 2026)
 
 | Resource | Use |
 |----------|-----|
@@ -154,15 +154,16 @@ Score 0–2 on each. **Staff bar is 16+/24, with nothing at 0. Senior and team-l
 
 ## Part 2 — Problem Catalog
 
-Work these in the order the schedule assigns. Existing notes live in
-[`system-design/`](system-design/); keep the same
-`transcription.md` / `structured.md` / `ai-generated.md` layout for new problems.
+Work these in the order [`weeks/`](weeks/) assigns. Existing notes and the **practice log** —
+which problems you've done, who drove them, and whether you've done each solo at the staff bar —
+live in [`system-design/`](system-design/). Add `structured.md` notes for new problems.
 
-### Tier A — Already covered, revisit at the staff bar (weeks 1–4)
+### Tier A — Already practiced; redo at the staff bar
 
-You have notes on these. Re-do them **without reading your notes**, then diff against the
-staff rubric — the gap will be almost entirely in rows 4–6 (trade-off ownership, blast
-radius, ops/cost/migration).
+Five from solo recordings in the spring, six from mock sessions with a friend over the summer
+(URL shortener, job scheduler, rate limiter, news feed, ad click aggregator, WhatsApp). Re-do
+them **as the candidate, cold, no notes**, then score with the rubric — the gap will be almost
+entirely in rows 4–6 (trade-off ownership, blast radius, ops/cost/migration). Weeks 1, 4 and 8.
 
 | Problem | Staff-level angle to add |
 |---------|--------------------------|
@@ -171,8 +172,11 @@ radius, ops/cost/migration).
 | [Web crawler](system-design/web-crawler/) | Politeness as a multi-tenant scheduling problem; recrawl prioritization as an economic decision; trap detection; cost of storage vs freshness |
 | [Ad click aggregator](system-design/ad-click-aggregator/) | Exactly-once vs at-least-once and its *billing* consequence; late/out-of-order events and watermarking; reconciliation batch job as the source of truth; fraud filtering stage |
 | [Dropbox / file sync](system-design/dropbox/) | Conflict resolution semantics; chunk dedup economics; sync protocol under flaky mobile networks; the migration story for changing chunk size |
+| Distributed job scheduler | Exactly-once execution via leases + idempotency; clock skew; thundering herd at the top of the hour; what the operator sees when a run is late |
+| News feed | Fanout hybrid with a cost model attached; celebrity threshold as a number; ranking service degradation; the "add an LLM summary" extension |
+| WhatsApp / chat | Deploying a stateful connection tier; ordering guarantees per conversation; multi-region (Week 3); the 3am page |
 
-### Tier B — Core staff problems (weeks 3–8)
+### Tier B — Core staff problems (Uber in Week 2; the rest are mock material)
 
 | Problem | Primary skill tested |
 |---------|---------------------|
@@ -189,7 +193,7 @@ radius, ops/cost/migration).
 | **Multi-tenant API gateway / control plane** | Isolation, noisy neighbors, quota enforcement, config propagation, safe rollout |
 | **Video streaming / upload pipeline (YouTube)** | Transcode fan-out, ABR ladder cost, CDN economics, resumable upload |
 
-### Tier C — Staff-flavored problems (weeks 8–10)
+### Tier C — Staff-flavored problems (Weeks 3 and 7)
 
 These are the ones that separate levels. Practice them explicitly; they are rarely in
 standard question banks.
@@ -203,7 +207,7 @@ standard question banks.
 | **"Make this system multi-region"** | Failure domains, data residency, active-active vs active-passive, conflict resolution, RTO/RPO, cross-region cost |
 | **"We had a 4-hour outage from a retry storm. Redesign so it can't recur."** | Backpressure, circuit breakers, jittered retry budgets, load shedding, graceful degradation, isolation |
 
-### Tier D — ML / AI design (week 9, and expect one in every loop)
+### Tier D — ML / AI design (Weeks 5 and 6; expect one in most senior+ loops)
 
 | Problem | Focus |
 |---------|-------|
@@ -212,212 +216,36 @@ standard question banks.
 | **LLM serving platform** | GPU capacity and batching, KV cache, streaming, routing across model tiers, quotas, fallback on provider failure, cost per token guardrails |
 | **Feed ranking with an ML model in the path** | Where the model sits, degradation when it's down, shadow deploys, feature freshness, A/B infrastructure |
 | **Abuse / fraud detection** | Online + offline hybrid, label delay, feedback loops, precision/recall as a *business* trade-off |
+| **"Add an AI assistant / RAG / agent to this existing system"** | The 2026 follow-up to any classic design: where the model call sits (sync vs async), fallback when it's down, cost per call × DAU, what you cache, how you evaluate it. Practiced as the Week 4 extension |
+| **Agent workflow platform** | Tool-call orchestration, step idempotency and retries, budget/step limits, human-in-the-loop gates, audit trail, isolation between tenants |
 
 ---
 
-## Part 3 — The 10-Week Schedule
+## Part 3 — The Schedule
 
-### Weekly session structure
+**The schedule lives in [`weeks/`](weeks/) — one page per week, 8 weeks from 12 Oct 2026.**
+The v1 10-week schedule is in [`archive/plan-v1-sep-2026/`](archive/plan-v1-sep-2026/).
 
-| Session | Length | Purpose |
-|---------|--------|---------|
-| **A — Primitive study** | 90 min | Learn the week's building block. Output: a one-page **component card** (see Part 4) |
-| **B — Timed problem** | 60 min | 45 min solo, whiteboard/paper, no notes. Then 15 min self-score with the Part 0 rubric |
-| **C — Staff move drill** | 60 min | Practice the week's staff behavior on the problem from session B. Output: written answer |
-| **D — Review or mock** | 60 min | Read the reference solution, list 3 misses. Every other week, replace with a live mock |
+Every Wednesday follows the same shape:
 
-**Rule: never read the reference solution before your own attempt.** The value is entirely in
-the gap between your answer and theirs.
+| Block | Length | Output |
+|-------|--------|--------|
+| **Study** | 20 min | The week's primitive; a one-page component card when it's a new store or tier (Part 4) |
+| **Timed problem** | 45 min | Solo, paper, no notes |
+| **Staff move** | 15 min | The week's staff behavior, written: trade-off lines, blast radius, cost model, scope cuts, postmortem, reversibility |
+| **Score** | 10 min | Rubric out of 24, three named misses, *then* the reference breakdown |
 
-**If you are also targeting team lead:** close every session C with the four-question lead lens
+**Rule: never read the reference before your own attempt.** The value is entirely in the gap.
+
+**If you are also targeting team lead:** close the staff move with the four-question lead lens
 (sequencing, team shape, risk to the date, support cost) from
 [Using this plan at three altitudes](#using-this-plan-at-three-altitudes). Five minutes, written.
 
 ---
 
-### Week 1 — Recalibration + Storage Primitives
-
-**Goal:** Rebuild the framework at staff altitude and lock in relational vs KV depth.
-
-**Session A — Primitive study**
-- Read: [System Design in a Hurry](https://www.hellointerview.com/learn/system-design/in-a-hurry/introduction) — *Core Concepts* and *Delivery Framework* sections
-- Read: [5 Keys to Staff-Level System Design](https://www.hellointerview.com/blog/staff-level-system-design)
-- DDIA Ch. 3 (storage engines: B-tree vs LSM tree)
-- Component cards: **Postgres**, **DynamoDB**
-
-**Session B — Timed problem:** URL shortener, no notes, 45 min. You have notes on this already; that's the point — you're measuring altitude, not knowledge.
-
-**Session C — Staff move: quantification drives design**
-Rewrite your Week 1 design so every architectural choice cites a number you computed. If a
-number doesn't justify a component, delete the component.
-
-**Session D:** Diff against [`system-design/url-shortener/structured.md`](system-design/url-shortener/structured.md). Score yourself. Expect a low score on rows 4–6 — that's your baseline.
-
----
-
-### Week 2 — Replication, Consistency, Consensus
-
-**Session A**
-- DDIA Ch. 5 (replication) and Ch. 9 (consistency and consensus)
-- [Raft](https://raft.github.io/) — paper §5, plus the visualization
-- Kleppmann lectures 4–6 (consistency models, linearizability, eventual consistency)
-- Component cards: **Raft/consensus**, **read replicas**
-
-**Session B — Timed problem:** Distributed job scheduler (exactly-once cron).
-
-**Session C — Staff move: trade-off ownership**
-For every choice in your scheduler, write three lines: *what I chose*, *what I gave up*,
-*the condition under which I'd reverse it*. This three-line pattern is the single highest-value
-verbal habit for staff interviews — drill it until it's automatic.
-
-**Session D:** Read [Hello Interview's job scheduler breakdown](https://www.hellointerview.com/learn/system-design/problem-breakdowns/). List 3 misses.
-
----
-
-### Week 3 — Partitioning, Sharding, Hot Keys
-
-**Session A**
-- DDIA Ch. 6 (partitioning)
-- [Dynamo paper](https://www.allthingsdistributed.com/files/amazon-dynamo-sosp2007.pdf) §4 (consistent hashing, quorums, hinted handoff)
-- Component cards: **Cassandra**, **consistent hashing**
-
-**Session B — Timed problem:** Rate limiter (revisit) — this time as **shared multi-tenant infrastructure** used by 30 teams, not a single-service utility.
-
-**Session C — Staff move: blast radius**
-Write the failure analysis for your rate limiter: what breaks when the counter store is
-partitioned, does it fail open or closed, *who decides that policy*, what the retry behavior
-of 30 client teams does to it, and what isolation prevents one tenant from starving others.
-
-**Session D:** Diff vs [`system-design/rate-limiter/structured.md`](system-design/rate-limiter/structured.md) + read [Builders' Library — Fairness in multi-tenant systems](https://aws.amazon.com/builders-library/).
-
----
-
-### Week 4 — Caching and the Read Path
-
-**Session A**
-- [Builders' Library — Caching challenges and strategies](https://aws.amazon.com/builders-library/caching-challenges-and-strategies/)
-- Cache invalidation patterns, thundering herd, negative caching, TTL jitter
-- Component cards: **Redis**, **CDN**
-
-**Session B — Timed problem:** News feed / timeline (Twitter home timeline).
-
-**Session C — Staff move: cost modeling**
-Produce a one-page cost model for your feed: storage, cache footprint, egress, compute.
-Identify the dominant line item and one change that halves it. Then state what quality that
-change costs you.
-
-**Session D — MOCK #1.** Book it. Any Tier B problem. Ask explicitly to be scored at staff level.
-
----
-
-### Week 5 — Messaging, Streaming, Idempotency
-
-**Session A**
-- DDIA Ch. 11 (stream processing)
-- [Kafka design docs](https://kafka.apache.org/documentation/#design) — partitions, ISR, exactly-once
-- Watermarks, windowing, late events, backpressure
-- Component cards: **Kafka**, **Flink**
-
-**Session B — Timed problem:** Ad click aggregator (revisit) with billing correctness as a hard requirement.
-
-**Session C — Staff move: correctness under failure**
-Write the exactly-once story end to end: producer idempotency, consumer offset semantics,
-sink idempotency, and the reconciliation batch job that is the actual source of truth. State
-the money consequence of getting each one wrong.
-
-**Session D:** Diff vs [`system-design/ad-click-aggregator/structured.md`](system-design/ad-click-aggregator/structured.md). Read one [Jepsen analysis](https://jepsen.io/analyses) for calibration on what "exactly once" claims are worth.
-
----
-
-### Week 6 — Real-Time, Stateful Connections, Fanout
-
-**Session A**
-- WebSocket/SSE/long-poll trade-offs, connection registry, sticky routing, reconnect storms
-- Pub/sub fanout topologies; fanout-on-write vs fanout-on-read hybrid
-- Component cards: **WebSocket layer**, **pub/sub**
-
-**Session B — Timed problem:** Chat system (WhatsApp/Slack scale).
-
-**Session C — Staff move: operability**
-For your chat system, specify: 3 SLIs with targets, the alert that fires first in an
-incident, the dashboard a responder opens, the deploy strategy for a stateful connection tier
-(you cannot just restart it), and the kill switch.
-
-**Session D:** Read the Hello Interview chat breakdown + [Builders' Library — Implementing health checks](https://aws.amazon.com/builders-library/implementing-health-checks/).
-
----
-
-### Week 7 — Search, Geo, Analytics
-
-**Session A**
-- Inverted indexes, index build pipelines, near-real-time indexing
-- Geospatial indexing: geohash, S2, quadtree
-- OLAP vs OLTP, columnar storage, pre-aggregation
-- Component cards: **Elasticsearch**, **geo index**, **OLAP store (ClickHouse/Druid)**
-
-**Session B — Timed problem:** Uber / proximity matching service.
-
-**Session C — Staff move: scope negotiation**
-Re-open the Uber problem and practice the *opening five minutes only*, three different ways:
-narrow to matching, narrow to location ingestion, narrow to trip lifecycle. Each time, state
-what you're cutting and why. Do it out loud, timed, until you can do it in 90 seconds.
-
-**Session D — MOCK #2.**
-
----
-
-### Week 8 — Multi-Region, Failure, Cost
-
-**Session A**
-- [Google SRE Book](https://sre.google/books/) — Ch. 21 (handling overload), Ch. 22 (cascading failures)
-- [Builders' Library — Timeouts, retries, and backoff with jitter](https://aws.amazon.com/builders-library/timeouts-retries-and-backoff-with-jitter/)
-- [Builders' Library — Using load shedding to avoid overload](https://aws.amazon.com/builders-library/using-load-shedding-to-avoid-overload/)
-- Active-active vs active-passive, RTO/RPO, data residency, cell-based architecture
-- Component cards: **multi-region topology**, **circuit breaker / load shedder**
-
-**Session B — Timed problem (Tier C):** *"We had a 4-hour outage from a retry storm. Redesign so it can't recur."*
-
-**Session C — Timed problem (Tier C):** *"Make this system multi-region."* Use your Week 6 chat design as the input.
-
-**Session D:** Write the postmortem-style design doc for the retry storm answer: contributing factors, the design changes, and the detection that would have caught it in 5 minutes instead of 4 hours.
-
----
-
-### Week 9 — ML / AI System Design
-
-**Session A**
-- [ML System Design Interview Guide — Exponent](https://www.tryexponent.com/blog/machine-learning-system-design-interview-guide)
-- [alirezadir MLSD template](https://github.com/alirezadir/machine-learning-interviews/blob/main/src/MLSD/ml-system-design.md)
-- The retrieval → pre-rank → rank funnel and its per-stage latency budget
-- Component cards: **feature store**, **vector DB**, **model serving tier**
-
-**Session B — Timed problem:** Recommendation / ranking system (e.g. short-video feed).
-
-**Session C — Timed problem:** RAG over enterprise documents. Cover permission-aware
-retrieval, freshness, eval, and cost per query — these are the four things most candidates miss.
-
-**Session D:** LLM serving platform, focused on capacity and cost: GPU batching, KV cache,
-model tiering, quota enforcement, and behavior when the upstream provider degrades.
-
----
-
-### Week 10 — Migration, Evolution, Polish
-
-**Session A**
-- [Martin Fowler — Strangler Fig](https://martinfowler.com/bliki/StranglerFigApplication.html) and related patterns
-- CDC-based migration, dual writes, shadow reads, backfill + verify, cutover, rollback
-
-**Session B — Timed problem (Tier C):** *"Migrate 50TB from MySQL to a distributed store with zero downtime."*
-
-**Session C — Timed problem (Tier C):** *"Design a platform 30 teams will build on."* Include interface contracts, guardrails, deprecation policy, and where on-call load lands.
-
-**Session D — MOCK #3 (full loop simulation).** Then re-score your Week 1 URL shortener answer against the rubric and compare to your baseline.
-
----
-
 ## Part 4 — Component Cards
 
-Build one card per primitive as you go. By Week 10 you'll have ~20. These are what you draw
+Build one card per primitive as you go. By the end of the plan you'll have ~15. These are what you draw
 on for deep dives, and writing them is what converts reading into recall.
 
 **Card template (one page, hand-written is fine):**
@@ -536,23 +364,14 @@ whether complexity is warranted; seniors reflexively solve for it.
 
 ---
 
-## Part 7 — Weekly Progress Tracker
+## Part 7 — Progress
 
-| Week | Focus | Problem(s) | Cards | Rubric score | Mock |
-|------|-------|-----------|-------|--------------|------|
-| 1 | Framework + storage | URL shortener | Postgres, DynamoDB | /24 | — |
-| 2 | Replication + consensus | Job scheduler | Raft, replicas | /24 | — |
-| 3 | Partitioning | Rate limiter (multi-tenant) | Cassandra, hashing | /24 | — |
-| 4 | Caching + read path | News feed | Redis, CDN | /24 | Mock #1 |
-| 5 | Streaming + idempotency | Ad click aggregator | Kafka, Flink | /24 | — |
-| 6 | Real-time + fanout | Chat | WebSocket, pub/sub | /24 | — |
-| 7 | Search + geo + OLAP | Uber proximity | ES, geo, OLAP | /24 | Mock #2 |
-| 8 | Multi-region + failure | Retry storm; multi-region | Regions, shedding | /24 | — |
-| 9 | ML / AI | Recsys; RAG; LLM serving | Feature store, vector DB | /24 | — |
-| 10 | Migration + platform | 50TB migration; platform | — | /24 | Mock #3 |
+Design scores go in the master [tracker](interview-prep-plan.md#part-6--progress-tracker), one row
+per week. The per-problem record — what you've designed, who drove it, whether you've done it solo
+at the staff bar — is the [practice log](system-design/README.md#practice-log).
 
-**Readiness gate:** you are ready when you score **16+/24 on three consecutive unseen
-problems**, at least one of them Tier C, without reading notes.
+**Readiness gate:** 16+/24 on three consecutive unseen problems, at least one Tier C and one
+Tier D, without reading notes.
 
 ---
 

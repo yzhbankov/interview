@@ -1,12 +1,12 @@
-# Week 5 — Streaming, idempotency, and delivery under pressure
+# Week 5 — AI system design I: RAG
 
-**Goal:** Correctness under failure when money is involved. Scope-cutting stories.
+**Week of:** Mon 9 Nov 2026
+**Goal:** The design round that now appears in roughly half of senior+ loops. Plus the strategy story and the honest failure story.
 
 **Due by Sunday**
 
-- [ ] Ad click aggregator with billing correctness
-- [ ] End-to-end exactly-once write-up
-- [ ] Story 11: saying no; refined timeline story
+- [ ] RAG design with eval and cost per query
+- [ ] Story 12; incident story rewritten at staff altitude
 
 | | | |
 |---|---|---|
@@ -14,85 +14,73 @@
 
 ---
 
-## Mon — Coding, 60 min · Heaps
+## Mon — Coding, 60 min · Tries & LRU
 
-- [ ] [Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/)
-- [ ] [Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/) — two heaps
-- [ ] [Top K Frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/)
-- [ ] [Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/)
+- [ ] [Implement Trie](https://leetcode.com/problems/implement-trie-prefix-tree/)
+- [ ] [LRU Cache](https://leetcode.com/problems/lru-cache/) — HashMap + doubly linked list; target under 15 min
+- [ ] Stretch: [Word Search II](https://leetcode.com/problems/word-search-ii/)
 
-*Done when:* You recognize "top k / streaming median" as a heap problem instantly.
+*Done when:* LRU in under 15 minutes, clean.
 
----
+## Tue — Coding, 60 min · Practical, API-shaped
 
-## Tue — Coding, 60 min · Intervals
+From [`coding-track.md` § Practical problems](../coding-track.md#practical--api-shaped-problems-lead-and-staff-loops). Interface first, tests, no tricks.
 
-- [ ] [Merge Intervals](https://leetcode.com/problems/merge-intervals/)
-- [ ] [Insert Interval](https://leetcode.com/problems/insert-interval/)
-- [ ] [Meeting Rooms II](https://leetcode.com/problems/meeting-rooms-ii/)
-- [ ] [Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/)
+- [ ] Token-bucket rate limiter with a public interface
+- [ ] Retry with exponential backoff **and jitter**, cancellable
+- [ ] If time: bounded LRU with TTL and eviction callbacks
 
-*Done when:* Sort-by-start vs sort-by-end is a decision you make deliberately.
+*Done when:* someone could use each API from the signature alone.
 
 ---
 
-## Wed — System design, 90 min
+## Wed — System design, 90 min · RAG over enterprise documents
 
-### Study, 30 min
+**Study, 20 min**
 
-- [ ] DDIA Ch. 11 (stream processing)
-- [ ] [Kafka design docs](https://kafka.apache.org/documentation/#design) — partitions, ISR, exactly-once
-- [ ] Watermarks, windowing, late events, backpressure
-- [ ] Component cards: **Kafka**, **Flink**
+- [ ] Chip Huyen, *AI Engineering* — the RAG chapter (chunking, hybrid retrieval, reranking, eval)
+- [ ] [Design Gurus — AI/ML system design roadmap 2026](https://www.designgurus.io/blog/prepare-for-ai-ml-system-design-interview-2026) for the shape of the round
 
-### Timed problem, 45 min — no notes, on paper
+**Timed, 45 min — no notes**
 
-**Ad click aggregator** (revisit) with **billing correctness as a hard requirement**. 45 min.
+**An internal assistant that answers questions over a company's documents** (wikis, tickets, drive). Must cover the four things most candidates miss: **permission-aware retrieval** · **freshness** (a doc edited 5 minutes ago) · **evaluation** (how you know answers got worse) · **cost per query**.
 
-### Staff move, 15 min · Correctness under failure
+**Staff move, 15 min — failure and eval**
 
-Write the exactly-once story end to end: producer idempotency → consumer offset semantics → sink idempotency → the reconciliation batch job that is the actual source of truth. State the money consequence of getting each one wrong.
+What does a confidently wrong answer cost, and how would you detect a quality regression within a day of a model or index change? Name the offline eval set, the online signal, and the kill switch (fall back to plain search).
 
-### Team-lead lens (5 min, if lead roles are in scope)
+**Score, 10 min** — rubric. AI designs score low on rows 5–6 the first time; check for eval and cost specifically.
 
-Sequencing · team shape · risk to the date · support cost —
-see [the four questions](../staff-system-design.md#using-this-plan-at-three-altitudes).
-
-### Review
-
-Diff vs [`system-design/ad-click-aggregator/structured.md`](../system-design/ad-click-aggregator/structured.md). Read one [Jepsen analysis](https://jepsen.io/analyses) to calibrate what "exactly once" claims are worth.
-
-*Done when:* you have a rubric score out of 24 and three named misses.
+*Done when:* score, misses, and a cost-per-query figure you can defend.
 
 ---
 
-## Thu — Leadership & behavioral, 60 min · Scope and stakeholders
+## Thu — Behavioral, 60 min · Strategy and failure
 
-- [ ] Refine [the timeline story](../star-stories/session-2-project-timeline.md) — good reflection already; it needs a number and the *scope you traded*
-- [ ] Story 11 — **saying no / managing a demanding stakeholder**
-- [ ] For both: what happened to the thing you cut? (Interviewers ask this and most candidates have no answer)
+- [ ] **Story 12 — a multi-quarter technical direction you set**: the doc you wrote, who adopted it, how adoption was measured. If you have no org-scale version, write the honest team-scale one; inflated scope collapses on the second follow-up
+- [ ] Rewrite the [production incident](../star-stories/session-1-jan-22.md#1-production-incident) at staff altitude: not "I fixed it" but *what you changed structurally so the class of failure ended, and what it cost*. Use the gap you found in Week 3 Wed
+- [ ] Add a **postmortem culture** answer: blameless review, action-item follow-through
 
-*Done when:* Both stories end with a measurable outcome, not "we delivered on time".
+*Done when:* story 12 survives "who disagreed with this direction, and what did they say?"
 
 ---
 
 ## Fri — Review, 15 min
 
-- [ ] Fill this week's row in the [progress tracker](../interview-prep-plan.md#part-6--progress-tracker)
-- [ ] Name the one weakest thing this week
-- [ ] Pick one fix to apply next week — one, not five
+- [ ] Fill this week's row in the [tracker](../interview-prep-plan.md#part-6--progress-tracker)
+- [ ] One weakest thing; one fix
 
 ---
 
-## Sat — Mock, 90 min
+## Sat — Mock, 90 min · Coding, one hard
 
-**Coding mock** — 1 hard problem, 35 min, out loud.
+1 hard problem, 35 min, aloud. Then 15 min written: where did the time go?
 
 ---
 
 ## Week 5 gate
 
-You can explain exactly-once end to end without hand-waving the reconciliation step.
+You can explain how a RAG system fails and what it costs per query without hand-waving either.
 
 ---
 

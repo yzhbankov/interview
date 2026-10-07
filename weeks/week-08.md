@@ -1,12 +1,13 @@
-# Week 8 — Multi-region, failure, cost, and failure stories
+# Week 8 — Polish and the full loop
 
-**Goal:** Overload, cascading failure, and the honest failure stories that carry the most signal.
+**Week of:** Mon 30 Nov 2026
+**Goal:** Measure the delta from Week 1. Make every opening automatic. Simulate a real day.
 
 **Due by Sunday**
 
-- [ ] Retry-storm redesign + postmortem-style doc
-- [ ] Multi-region version of your chat design
-- [ ] Incident story at staff altitude; story 14
+- [ ] Week 1 problem re-scored; six 5-minute openings on tape
+- [ ] Three openers, questions per interviewer type, the level answer
+- [ ] Full-loop mock done; [readiness gates](../interview-prep-plan.md#readiness-gates) checked
 
 | | | |
 |---|---|---|
@@ -14,87 +15,67 @@
 
 ---
 
-## Mon — Coding, 60 min · Tries & design problems
+## Mon — Coding, 60 min · Repair pass
 
-- [ ] [Implement Trie](https://leetcode.com/problems/implement-trie-prefix-tree/)
-- [ ] [Word Search II](https://leetcode.com/problems/word-search-ii/)
-- [ ] [LRU Cache](https://leetcode.com/problems/lru-cache/) — HashMap + doubly linked list
+- [ ] Re-solve from memory the 5 problems you got wrong or slow in Weeks 1–7
+- [ ] [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/) if not yet done — the last of the [must-know 15](../coding-track.md#must-know-15)
+- [ ] For each: what specifically went wrong the first time?
 
-*Done when:* You can build LRU in under 15 minutes, clean.
+*Done when:* the repeats are clean and fast.
 
----
+## Tue — Coding, 60 min · Bar check
 
-## Tue — Coding, 60 min · Practical / API-shaped coding — increasingly what lead and staff loops ask
+- [ ] 2 mediums in 45 minutes, strict timer, aloud. That is the senior bar
+- [ ] 15 min: one practical problem from [`coding-track.md`](../coding-track.md#practical--api-shaped-problems-lead-and-staff-loops) you haven't done
 
-- [ ] An in-process rate limiter (token bucket) with a clean public interface
-- [ ] Retry with exponential backoff **and jitter**, cancellable
-- [ ] A bounded LRU with TTL and eviction callbacks
-- [ ] For each: name the interface first, write tests, no LeetCode tricks
-
-*Done when:* Someone else could use your API from the signature alone.
+*Done when:* you cleared it, or you know exactly which pattern cost you the time.
 
 ---
 
-## Wed — System design, 90 min
+## Wed — System design, 90 min · Re-score and rapid fire
 
-### Study, 30 min
+**Timed, 45 min — no notes**
 
-- [ ] [Google SRE Book](https://sre.google/books/) Ch. 21 (handling overload), Ch. 22 (cascading failures)
-- [ ] [Builders' Library — Timeouts, retries, backoff with jitter](https://aws.amazon.com/builders-library/timeouts-retries-and-backoff-with-jitter/)
-- [ ] [Builders' Library — Load shedding to avoid overload](https://aws.amazon.com/builders-library/using-load-shedding-to-avoid-overload/)
-- [ ] Active-active vs active-passive, RTO/RPO, data residency, cell-based architecture
-- [ ] Component cards: **multi-region topology**, **circuit breaker / load shedder**
+Redo the **Week 1 problem**, cold. Score it. The delta from Week 1 is your evidence of readiness.
 
-### Timed problem, 45 min — no notes, on paper
+**Rapid fire, 35 min — six openings, on tape**
 
-Two Tier C problems this week. (1) *"We had a 4-hour outage from a retry storm. Redesign so it can't recur."* (2) *"Make this multi-region"* — using your Week 6 chat design as the input.
+For each of the summer six (URL shortener, job scheduler, rate limiter, news feed, ad click aggregator, WhatsApp): **the first five minutes only** — scope cut with a reason, the two numbers that drive the design, and *"the hard part here is…"*. Five minutes each, recorded. This is the [delivery script](../staff-system-design.md#part-5--delivery-script-for-staff-interviews) opening, six times.
 
-### Staff move, 15 min · Postmortem as design doc
+**Review, 10 min** — watch two of the six. Did you compute before drawing? Did you name the hard part?
 
-Write the retry-storm answer as a postmortem-style doc: contributing factors, the design changes, and the detection that would have caught it in 5 minutes instead of 4 hours.
-
-### Team-lead lens (5 min, if lead roles are in scope)
-
-Sequencing · team shape · risk to the date · support cost —
-see [the four questions](../staff-system-design.md#using-this-plan-at-three-altitudes).
-
-### Review
-
-Compare your detection story against how you actually found the incident in your real production-incident story. The gap between them is your Thursday material.
-
-*Done when:* you have a rubric score out of 24 and three named misses.
+*Done when:* six openings exist and the Week 1 delta is written in the tracker.
 
 ---
 
-## Thu — Leadership & behavioral, 60 min · Failure track
+## Thu — Behavioral, 60 min · Final polish
 
-- [ ] Rewrite [the production incident story](../star-stories/session-1-jan-22.md#1-production-incident) at staff altitude: not "I fixed it" but **what you changed structurally so the class of failure ended, and what it cost**
-- [ ] Add a **postmortem culture** answer — blameless review, action-item follow-through
-- [ ] Story 14 — **a decision made with incomplete or bad data**
-- [ ] [Drill 5](../leadership-behavioral.md#drill-5--weakness-rehearsal): rehearse your real weakness, with the mechanism and the evidence it works
+- [ ] All three [openers](../leadership-behavioral.md#part-5--openers) — senior, lead, staff — 60–90 s each, aloud
+- [ ] [Drill 2, the scoping ladder](../leadership-behavioral.md#drill-2--the-scoping-ladder) on the [conflict](../star-stories/session-1-jan-22.md#2-conflict-with-teammate) and [tech-stack](../star-stories/session-1-jan-22.md#3-technology-stack-decision) stories: senior, lead and staff versions of each
+- [ ] Three [questions per interviewer type](../leadership-behavioral.md#part-6--questions-to-ask-them)
+- [ ] Re-read the [anti-pattern table](../leadership-behavioral.md#part-7--anti-patterns-that-cost-levels) — and again the night before any real loop
 
-*Done when:* Two of your stories now contain genuine failure that you own.
+*Done when:* you can open any interview in three registers on demand.
 
 ---
 
 ## Fri — Review, 15 min
 
-- [ ] Fill this week's row in the [progress tracker](../interview-prep-plan.md#part-6--progress-tracker)
-- [ ] Name the one weakest thing this week
-- [ ] Pick one fix to apply next week — one, not five
+- [ ] Fill the last row in the [tracker](../interview-prep-plan.md#part-6--progress-tracker)
+- [ ] Check the [readiness gates](../interview-prep-plan.md#readiness-gates) for your target role
 
 ---
 
-## Sat — Mock, 90 min
+## Sat — Mock, 3 hours · Full loop
 
-**Behavioral + hiring-manager mock**, 45 min — including "what level do you think you're at?" and "what are your questions for me?"
+Coding (45) → design (45) → behavioral or deep dive (45), back to back in one morning, with your friend running at least one round. Stamina is a real variable and this is where you measure it.
 
 ---
 
 ## Week 8 gate
 
-You have a two-sentence level answer that names scope, not years.
+Every readiness-gate row true for your target role, or you know exactly which row to work on next — and that becomes a two-week extension, not a new plan.
 
 ---
 
-[← Week 7](week-07.md) · [Week index](README.md) · [Week 9 →](week-09.md)
+[← Week 7](week-07.md) · [Week index](README.md)

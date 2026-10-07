@@ -10,7 +10,7 @@
 
 | | | |
 |---|---|---|
-| [Master plan](../interview-prep-plan.md) | [Week index](README.md) | [Rubric](../staff-system-design.md#self-scoring-rubric-use-after-every-practice-problem) |
+| [Master plan](../../interview-prep-plan.md) | [Week index](README.md) | [Rubric](../../staff-system-design.md#self-scoring-rubric-use-after-every-practice-problem) |
 
 ---
 
@@ -53,7 +53,7 @@ Sketch an LLM serving platform focused on capacity and cost: GPU batching, KV ca
 ### Team-lead lens (5 min, if lead roles are in scope)
 
 Sequencing · team shape · risk to the date · support cost —
-see [the four questions](../staff-system-design.md#using-this-plan-at-three-altitudes).
+see [the four questions](../../staff-system-design.md#using-this-plan-at-three-altitudes).
 
 ### Review
 
@@ -76,7 +76,7 @@ Score both designs with the rubric. ML designs usually score low on rows 5–6 t
 
 ## Fri — Review, 15 min
 
-- [ ] Fill this week's row in the [progress tracker](../interview-prep-plan.md#part-6--progress-tracker)
+- [ ] Fill this week's row in the [progress tracker](../../interview-prep-plan.md#part-6--progress-tracker)
 - [ ] Name the one weakest thing this week
 - [ ] Pick one fix to apply next week — one, not five
 
